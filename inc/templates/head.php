@@ -109,7 +109,7 @@ if (isset($_POST['next'])) {
     <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
 
     <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link id="fontawesome" href="./assets/css/all.css" rel="stylesheet" />
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
@@ -129,7 +129,7 @@ if (isset($_POST['next'])) {
                 <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
                     <div class="container-fluid px-0">
                         <a class="navbar-brand font-weight-bolder ms-sm-3" href="index.php" rel="tooltip" title="Designed and Coded by Sven Bledt" data-placement="bottom" target="_blank">
-                            Trivia Quiz
+                            WinX Reloaded
                         </a>
                         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon mt-2">
@@ -204,9 +204,9 @@ if (isset($_POST['next'])) {
 
                                     <?php
                                     if (isset($_SESSION['LOGGEDIN']) && $_SESSION['LOGGEDIN'] == true) {
-                                        echo '<a href="index.php?page=index&logout=true" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0"><i class="fas fa-sign-out-alt"></i>' . $user['username'] . '</a>';
+                                        echo '<a href="index.php?page=index&logout=true" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0"><i class="fas fa-sign-out-alt mx-1"></i>' . $user['username'] . '</a>';
                                     } else {
-                                        echo '<a href="index.php?page=sign-in" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0"><i class="fas fa-sign-in-alt"></i>Login</a>';
+                                        echo '<a href="index.php?page=sign-in" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0"><i class="fas fa-sign-in-alt mx-1"></i>Login</a>';
                                     };
                                     ?>
 
