@@ -31,18 +31,15 @@ if (isset($_POST['submit'])) {
                 exit;
             } else {
                 // Username is not valid
-                $msg = "Username must be at least 3 characters long and contain only letters and numbers.";
-                exit;
+                $msg = "Username must be at least 3 characters long and contain only letters and numbers without spaces.";
             }
         } else {
             // Email is not valid
             $msg = "Email is not valid";
-            exit;
         }
     } else {
         // Password is not valid
         $msg = "Password must be at least 8 characters long and contain at least one number, one uppercase letter and one lowercase letter.";
-        exit;
     }
 }
 ?>
