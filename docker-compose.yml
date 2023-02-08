@@ -1,0 +1,56 @@
+version: "3.8"
+
+# Services
+services:
+  # Nginx Service
+  nginx:
+    image: nginx:1.19
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www/php
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - php
+
+  # PHP Service
+  php:
+    build: ./docker/php
+    working_dir: /var/www/php
+    volumes:
+      - ./:/var/www/php
+    environment:
+      DB_NAME: db
+      DB_HOST: mysql
+      DB_USER: sven
+      DB_PASSWORD: opportunity
+
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  # MySQL Service
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_USER: sven
+      MYSQL_PASSWORD: opportunity
+      MYSQL_ROOT_PASSWORD: opportunity
+      MYSQL_PORT: 3336
+    container_name: mysql
+    ports:
+      - '3336:3306'
+    expose:
+      - '3336'
+    volumes:
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u $$MYSQL_USER --password=$$MYSQL_PASSWORD
+      interval: 5s
+      retries: 10
+ 
+volumes:
+  db_data:
+    driver: local
