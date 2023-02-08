@@ -32,41 +32,40 @@
 
  <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
      <section class="my-5 py-5">
-
          <div class="container mt-sm-5 mt-3">
-             <div class="row">
-                 <div class="col-lg-3">
+             <div class="row justify-content-center">
+                 <div class="col-sm-8">
                      <?php if (!isset($_SESSION['topic'])) { ?>
-                         <div class="position-sticky pb-lg-5 pb-3 mt-lg-0 mt-5 ps-2" style="top: 100px">
-                             <h3>Category</h3>
+                         <div class="position-sticky pb-lg-5 pb-3 mx-md-5 mt-lg-0 mt-0 ps-2" style="top: 100px">
+                             <h3>And Your Topic Is...</h3>
                              <h6 class="text-secondary font-weight-normal pe-3">Please choose the category of the quiz you wanna do!</h6>
                          </div>
                      <?php } else { ?>
-                         <div class="position-sticky pb-lg-5 pb-3 mt-lg-0 mt-5 ps-2" style="top: 100px">
+                         <div class="position-sticky pb-lg-5 pb-3 mx-md-5 mt-lg-0 mt-0 ps-2" style="top: 100px">
                              <h3>Have Fun</h3>
                              <h6 class="text-secondary font-weight-normal pe-3">Have fun answering the Questions of the quiz!</h6>
                          </div>
                      <?php } ?>
                  </div>
-                 <div class="col-lg-9">
-                     <div class="row mt-3">
+                 <div class="row justify-content-center">
+                 <div class="col-sm-12 mt-0">
                          <?php if (!isset($_SESSION['topic']) && isset($_SESSION['LOGGEDIN']) && $_SESSION['LOGGEDIN'] == true) { ?>
                              <!-- Questions -->
                              <form action="" method="post">
-                                 <div class="col-12">
-                                     <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+                                 <div class="col-lg pxy-6">
+                                     <div class="position-relative border-radius-md overflow-hidden shadow-lg mb-7">
                                          <div class="container border-bottom">
                                              <div class="row justify-space-between py-2">
-                                                 <div class="col-lg-3 me-auto">
+                                                 <div class="col-lg-8 me-auto">
                                                      <p class="lead text-dark pt-1 mb-0"><?php if (!isset($result)) { echo 'Choose your topic'; } else { echo $result; }; ?></p>
                                                  </div>
                                              </div>
                                          </div>
                                          <div class="tab-content tab-space">
                                              <div class="tab-pane active" id="preview-btn-color">
-                                                 <div class="row text-center py-3 mt-3">
+                                                 <div class="row text-center px-3 mt-3">
                                                      <div class="col-12 mx-auto">
-                                                         <select name="topic" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                                         <select name="topic" class="form-select form-select-lg my-3" aria-label=".form-select-lg example">
                                                          <?php foreach ($topics as $topic) { ?>
                                                             <option value="<?php echo $topic['topic']; ?>"><?php echo $topicNameMap[$topic['topic']]; ?></option><?php } ?>
                                                          </select>
@@ -81,7 +80,7 @@
                          <?php } else if (isset($_SESSION['topic']) && $logged_in) { ?>
                              <!-- Questions -->
                              <div class="col-12">
-                                 <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+                                 <div class="position-relative border-radius-md overflow-hidden shadow-lg mb-7">
                                      <div class="container border-bottom">
                                          <div class="row justify-space-between py-2">
                                              <div class="col-lg-3 me-auto">
@@ -131,7 +130,7 @@
                              </div>
                          <?php } else { ?>
                              <div class="col-12">
-                                 <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+                                 <div class="position-relative border-radius-md overflow-hidden shadow-lg mb-7">
                                      <div class="container border-bottom">
                                          <div class="row justify-space-between py-2">
                                              <div class="col-lg-3 me-auto">
@@ -156,6 +155,6 @@
                                  </div>
                              </div>
                          <?php } ?>
-                     </div>
+                    </div>
                  </div>
      </section>
