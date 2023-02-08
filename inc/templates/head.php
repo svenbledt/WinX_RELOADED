@@ -49,7 +49,7 @@ if (isset($_POST['next'])) {
 
     // insert answer into database
     $timest = getTimestamp();
-    $correct = "SELECT correct FROM answers WHERE question_id = '" . $current_question['id'] . "' AND answer = '" . $_POST['answer'] . "'";
+    $correct = "SELECT is_correct FROM answers WHERE question_id = '" . $current_question['id'] . "' AND answer = '" . $_POST['answer'] . "'";
     $correct = $conn->query($correct);
 
     if ($correct == 1) {
