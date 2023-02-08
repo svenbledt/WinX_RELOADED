@@ -19,17 +19,10 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link pe-1" href="https://twitter.com/svenbledt" target="_blank">
+                <a class="nav-link pe-1" href="https://twitter.com/sbledt" target="_blank">
                   <i class="fab fa-twitter text-lg opacity-8"></i>
                 </a>
               </li>
-
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://dribbble.com/svenbledt" target="_blank">
-                  <i class="fab fa-dribbble text-lg opacity-8"></i>
-                </a>
-              </li>
-
 
               <li class="nav-item">
                 <a class="nav-link pe-1" href="https://github.com/svenbledt" target="_blank">
@@ -37,11 +30,6 @@
                 </a>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://www.youtube.com/" target="_blank">
-                  <i class="fab fa-youtube text-lg opacity-8"></i>
-                </a>
-              </li>
             </ul>
           </div>
         </div>

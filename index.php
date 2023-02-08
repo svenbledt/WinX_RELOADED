@@ -7,6 +7,11 @@ require('inc/include.php');
 require('inc/templates/head.php');
 
 $page =  $_GET['page'];
+
+if (!isset($_SESSION['lang'])) {
+  $_SESSION['lang'] = 'en';
+}
+
 if (isset($page)) {
   $filename = "./_pages/" . $page . ".php";
   if (file_exists($filename)) {

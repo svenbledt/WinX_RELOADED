@@ -149,7 +149,7 @@
                                                      <p class="lead text-dark pt-1 mb-0">
                                                          <?php echo "You need to be logged in to take the quiz!"; ?>
                                                      </p>
-                                                     <a href="index.php?page=sign-in" class="btn btn-primary w-auto me-1 mb-0">Login</a>
+                                                     <a href="index.php?page=sign-in" class="btn bg-gradient-primary w-auto me-1 mb-0">Login</a>
                                                  </div>
                                              </div>
                                          </div>
