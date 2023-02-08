@@ -8,7 +8,7 @@
             <a href="https://www.creative-tim.com/product/material-kit">
               <img src="./assets/img/logo-ct-dark.png" class="mb-3 footer-logo" alt="main_logo">
             </a>
-            <h6 class="font-weight-bolder mb-4">Trivia Quiz</h6>
+            <h6 class="font-weight-bolder mb-4">WinX Reloaded</h6>
           </div>
           <div>
             <ul class="d-flex flex-row ms-n3 nav">
@@ -76,7 +76,7 @@
             <p class="text-dark my-4 text-sm font-weight-normal">
               All rights reserved. Copyright © <script>
                 document.write(new Date().getFullYear())
-              </script> Trivia Quiz by <a href="svenbledt.github.io" target="_blank">Sven Bledt</a>.
+              </script> Trivia Quiz by <a href="svenbledt.github.io" target="_blank">Sven Bledt</a> & Team.
             </p>
           </div>
         </div>

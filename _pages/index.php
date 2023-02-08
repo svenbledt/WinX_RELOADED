@@ -22,7 +22,7 @@
          <div class="container">
              <div class="row">
                  <div class="col-lg-7 text-center mx-auto">
-                     <h1 class="text-white pt-3 mt-n5">Trivia Quiz</h1>
+                     <h1 class="text-white pt-3 mt-n5">WinX Reloaded</h1>
                      <p class="lead text-white mt-3">Are you ready for the Ultimate Quiz experience. <br /> Join the fun today.</p>
                  </div>
              </div>
