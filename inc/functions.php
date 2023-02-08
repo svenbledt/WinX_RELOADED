@@ -164,3 +164,11 @@ function getrealip()
     }
     return $realip;
 }
+
+$topicNameMap = [
+    'geography' => 'Geography',
+    'music' => 'Music',
+    'ch-norris' => 'Chuck Norris',
+    'animals' => 'Animals',
+    'movies' => 'Movies',
+];

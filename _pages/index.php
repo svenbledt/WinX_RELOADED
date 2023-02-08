@@ -67,9 +67,8 @@
                                                  <div class="row text-center py-3 mt-3">
                                                      <div class="col-12 mx-auto">
                                                          <select name="topic" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                                             <?php foreach ($topics as $topic) { ?>
-                                                                 <option value="<?php echo $topic['topic']; ?>"><?php echo $topic['topic']; ?></option>
-                                                             <?php } ?>
+                                                         <?php foreach ($topics as $topic) { ?>
+                                                            <option value="<?php echo $topic['topic']; ?>"><?php echo $topicNameMap[$topic['topic']]; ?></option><?php } ?>
                                                          </select>
                                                          <button type="submit" class="btn btn-secondary">Start Quiz</button>
                                                      </div>

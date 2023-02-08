@@ -1,68 +1,53 @@
-# Docker for local web development: a basic LEMP stack (Linux, Nginx, MySQL, PHP)
 
-## Content
+[![Quiz Winx reloaded](https://media.istockphoto.com/id/1223692043/vector/quiz-neon-text-banner-on-brick-wall-questions-team-game-quiz-night-poster-pub-neon-signboard.jpg?s=612x612&w=0&k=20&c=eqCWw4lF_ypcD9xKy7pu5QBNeqLASUWYnKZVdIjzNyc=)](https://github.com/svenbledt/WinX_RELOADED "Go to repo!")
 
-This branch contains a basic LEMP stack running on Docker and orchestrated by Docker Compose, including:
 
-- A container for Nginx;
-- A container for PHP;
-- A container for MySQL;
-- A container for phpMyAdmin;
+[![#WinX_Reloaded - Thrivia Quiz - Better, Bigger; More...](https://img.shields.io/static/v1?label=%23WinX_Reloaded&message=Thrivia+Quiz+-+Better%2C+Bigger%3B+More...&color=2ea44f&style=for-the-badge)](https://github.com/svenbledt/WinX_RELOADED)
+---
 
-## Prerequisites
+---
+# Trivia Quiz+ &#169;WinX_Reloaded
+## Project Task / Assignment 
+* Create a website with a trivia quiz and use all avaliable Web-Dev-Techniques (Html, Css, Js, Php, Bs5, [Github](https://github.com/Gaudenz77/Smart_Is_Beautiful_Project), [Figma](https://www.figma.com/file/8QEAAFkEbpSOTPGylIn5TE/Smart-Is-Beautiful---Figma?node-id=0%3A1&t=njYADqtgww2a73Bh-1))
+----
 
-Make sure [Docker Desktop for Mac or PC](https://www.docker.com/products/docker-desktop) is installed and running, or head [over here](https://docs.docker.com/install/) if you are a Linux user. You will also need a terminal running [Git](https://git-scm.com/).
 
-This setup also uses localhost's port 8000 for Nginx, so make sure it is available.
+## Performance criteria
+<ul>
+<li>Adapt and extend content, technologies and methods of the existing Trivia Quiz</li>
+<li>Website that functions well</li>
+<li>Improved quiz experience</li>
+<li>Complete responive design functionality</li>
+<li>Website needs to be more attractive and easier to use than the prototype</li>
+<li>Use PHP/PDO to manage connection and data from MySQL</li>
+<li>PHP data collection ($_POST, $_GET, $_SESSION) and HTML generation</li>
+</ul>
 
-## Directions of use
+## Usage: Trivia Quiz
+<ol>
+<li>open Index.php-page</li>
+<li>manual</li>
+</ol>
 
-Clone the repository and change the current directory for the project's root:
+## Thank you for your time.
+---
+### Any feedback or assisting constructive critique is welcome.<br> Feel free to reach out or text via [Mail@Me](mailto:gaudenzraiber@yahoo.de).
+----
+----
+## License
+* none, free use
+----
+## Tools used
+* HTML, CSS, Javascript, PHP PDO, Phpmyadmin, Nginx, Mysql
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Bootstrap_5.2](https://getbootstrap.com/)
+* [Bootstrap_5.2](https://getbootstrap.com/)
+* [Bootstrap_5.2](https://getbootstrap.com/)
+* [Animate.css](https://animate.style/)
+* [Github](https://github.com/svenbledt/WinX_RELOADED) (for file repo/sharing/workflow)
+* Internet for research
+* imagination 
+* feeling for details
 
-```
-$ git clone https://github.com/opportunity-zh/opp-php-mysql.git
-
-$ cd opp-php-mysql
-```
-
-Run the following command:
-
-```
-$ docker-compose up -d
-```
-
-This may take a little bit of time, as some Docker images might need downloading.
-
-## Explanation
-
-The images used by the setup are listed and configured in [`docker-compose.yml`](https://github.com/opportunity-zh/opp-php-mysql/docker-compose.yml).
-
-When building and starting the containers based on the images for the first time, a MySQL database named `library` is automatically created (you can pick a different name for the MYSQL_DATABASE in the MySQL service's description in `docker-compose.yml`).
-
-The database data is persisted in its own local directory through the volume `db_data`, which is mounted onto MySQL's container. A phpMyAdmin interface is available at [localhost:8080](http://localhost:8080) (the database credentials are webDev / opport2022).
-
-## Cleaning up
-
-To stop the containers:
-
-```
-$ docker-compose stop
-```
-
-To destroy the containers:
-
-```
-$ docker-compose down
-```
-
-To destroy the containers and the associated volumes:
-
-```
-$ docker-compose down -v
-```
-
-To remove everything, including images and orphan containers:
-
-```
-$ docker-compose down -v --rmi all --remove-orphans
-```
+----
+### A production by [#WinXReloaded](https://github.com/svenbledt/WinX_RELOADED) / Team Red
