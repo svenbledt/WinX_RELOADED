@@ -116,7 +116,7 @@ if (isset($_POST['next'])) {
 
     <!-- CSS Files -->
 
-    <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+    <link id="pagestyle" href="./assets/css/style.css" rel="stylesheet" />
 
 </head>
 
