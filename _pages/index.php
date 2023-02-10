@@ -38,6 +38,7 @@
                      <?php if (!isset($_SESSION['topic'])) { ?>
                          <div class="position-sticky pb-lg-5 pb-3 mx-md-5 mt-lg-0 mt-0 ps-2" style="top: 100px">
                              <h3>And Your Topic Is...</h3>
+                             <p></p>
                              <h6 class="text-secondary font-weight-normal pe-3">Please choose the category of the quiz you wanna do!</h6>
                          </div>
                      <?php } else { ?>
@@ -67,8 +68,8 @@
                                                      <div class="col-12 mx-auto">
                                                          <select name="topic" class="form-select form-select-lg my-3" aria-label=".form-select-lg example">
                                                          <?php foreach ($topics as $topic) { ?>
-                                                            <option value="<?php echo $topic['topic']; ?>"><?php echo $topicNameMap[$topic['topic']]; ?></option><?php } ?>
-                                                         </select>
+                                                            <option value="<?php echo $topic['topic']; ?>"><?php echo ucwords($topic['topic']); ?></option><?php } ?>
+                                                         </select>                                                                      
                                                          <button type="submit" class="btn btn-secondary">Start Quiz</button>
                                                      </div>
                                                  </div>
@@ -147,6 +148,7 @@
                                                      <p class="lead text-dark pt-1 mb-0">
                                                          <?php echo "You need to be logged in to take the quiz!"; ?>
                                                      </p>
+                                                     
                                                      <a href="index.php?page=sign-in" class="btn btn-primary w-auto me-1 mb-0">Login</a>
                                                  </div>
                                              </div>

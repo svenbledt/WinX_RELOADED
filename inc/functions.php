@@ -171,4 +171,8 @@ $topicNameMap = [
     'ch-norris' => 'Chuck Norris',
     'animals' => 'Animals',
     'movies' => 'Movies',
+    'gen-knowledge' => 'General Knowledge',
+    'astronautics' => 'Astronautics'
+
+    
 ];
