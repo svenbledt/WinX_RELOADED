@@ -163,7 +163,7 @@ function getQuestionImage($conn, $image)
     $stmt->bindParam(':type', $image, PDO::PARAM_STR);
     $stmt->execute();
     $image = $stmt->fetch(PDO::FETCH_ASSOC);
-    $image_name = array_unique($image['image'], SORT_REGULAR);
+    $image_name = $image['image'];
     return $image_name;
 }
 
