@@ -70,7 +70,9 @@
                                                          <?php foreach ($topics as $topic) { ?>
                                                             <option value="<?php echo $topic['topic']; ?>"><?php echo ucwords($topic['topic']); ?></option><?php } ?>
                                                          </select>                                                                      
-                                                         <button type="submit" class="btn btn-secondary">Start Quiz</button>
+                                                         <button type="submit" class="btn">
+                                                            <i class="fa-light fa-circle-arrow-right fa-4x">
+                                                            <p style="font-family: Poppins, sans-serif; font-weight:bold; font-size: 30%">Start Quiz</p></i></button>';
                                                      </div>
                                                  </div>
                                              </div>
@@ -123,10 +125,10 @@
                                                             }
                                                             echo '<button type="submit" name="next" class="btn mx-auto px-2 me-2 mt-2">
                                                             <i class="fa-light fa-circle-arrow-right fa-4x">
-                                                            <p class="btnFont py-1" style="font-family: Poppins, sans-serif; font-size: 25%">next question</p></i></button>';
+                                                            <p style="font-family: Poppins, sans-serif; font-size: 25%">next question</p></i></button>';
                                                             echo '<button type="submit" name="back" class="btn mx-auto px-2 me-2 mt-2">
                                                             <i class="fa-light fa-forward-step fa-4x">
-                                                            <p class="btnFont py-1" style="font-family: Poppins, sans-serif; font-size: 25%">last question</p></i></button>';                      
+                                                            <p style="font-family: Poppins, sans-serif; font-size: 25%">last question</p></i></button>';                      
                                                             echo '</form>';
                                                         }
                                                         ?>
@@ -134,7 +136,7 @@
                                              </div>
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-2 m-3">
-                                                        <a href="#" role="button"><i class="fa-light fa-circle-arrow-up fa-2x"><p class="btnFont py-1" style="font-family: Poppins, sans-serif;">Up!</p></i></a>
+                                                        <a href="#" role="button"><i class="fa-light fa-circle-arrow-up fa-2x"><p style="font-family: Poppins, sans-serif;">Up!</p></i></a>
                                                     </div>
                                                 </div>
                                              </div>
