@@ -16,9 +16,17 @@
     }
 
     $image = $_SESSION['topic'];
+        if (!isset($_SESSION['topic'])) {
+            $bg = 'bg_main';
+        }
+        else  {
+            $image = $_SESSION['topic'];
+            $bg = getQuestionImage($conn, $image);
+
+        }
     ?>
  <header class="header-2">
-     <div class="page-header min-vh-75 relative" style="background-image: url('./assets/img/<?php echo getQuestionImage($conn, $image);?>.jpg')">
+     <div class="page-header min-vh-75 relative" style="background-image: url('./assets/img/<?php echo $bg?>.jpg')">
          <span class="mask bg-gradient-primary opacity-4"></span>
          <div class="container">
              <div class="row">
