@@ -30,7 +30,7 @@
      </div>
  </header>
 
- <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n9">
+ <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n9" style="background: linear-gradient(180deg, rgba(255,145,192,1) 0%, rgba(255,204,232,1) 5%, rgba(255,255,255,1) 100%);">
      <section class="my-1 py-1">
          <div class="container mt-sm-5 mt-3 mb-0">
              <div class="row justify-content-center">
@@ -49,7 +49,7 @@
                      <?php } ?>
                  </div>
                  <div class="row justify-content-center">
-                 <div class="col-sm-12 mt-0">
+                 <div class="col-sm-12 mt-0 animate__animated animate__rollIn">
                          <?php if (!isset($_SESSION['topic']) && isset($_SESSION['LOGGEDIN']) && $_SESSION['LOGGEDIN'] == true) { ?>
                              <!-- Questions -->
                              <form action="" method="post">

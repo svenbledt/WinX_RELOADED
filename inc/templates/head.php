@@ -118,6 +118,10 @@ if (isset($_POST['next'])) {
 
     <link id="pagestyle" href="./assets/css/style.css?v=3.0.4" rel="stylesheet" />
 
+    <!-- Animate-style-liprary css cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 
 <body class="index-page bg-gray-200">
