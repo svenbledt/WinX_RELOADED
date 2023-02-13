@@ -218,6 +218,25 @@ echo '<button type="submit" name="back" class="btn btn-primary mx-auto px-2 me-2
   right: 20px;
   display: none;
 } */
+/* .card{
+    background:  linear-gradient(180deg, rgba(255,145,192,1) 0%, rgba(255,204,232,1) 5%, rgba(255,255,255,1) 100%);
+
+} */
+
+
+/* .Geography {
+  background: linear-gradient(180deg, rgba(255,145,192,1) 0%, rgba(255,204,232,1) 5%, rgba(255,255,255,1) 100%);
+}
+.Astronautics {
+  background: linear-gradient(180deg, rgba(72,27,255,1) 0%, rgba(204,236,255,1) 8%, rgba(255,255,255,1) 100%);
+} */
+
+
 </style>
 
 <i class="fa-light fa-forward-step"></i>
+
+
+
+
+<?php echo ucfirst($topic);  ?> 
