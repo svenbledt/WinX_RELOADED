@@ -129,7 +129,7 @@ if (isset($_POST['submit'])) {
 <script src="../assets/js/plugins/parallax.min.js"></script>
 <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
 <!--  Google Maps Plugin    -->
-<script src="../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+<script src="../assets/js/main.min.js?v=3.0.4" type="text/javascript"></script>
 </body>
 
 </html>
