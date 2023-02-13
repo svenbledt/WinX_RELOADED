@@ -17,7 +17,7 @@
 
     ?>
  <header class="header-2">
-     <div class="page-header min-vh-75 relative" style="background-image: url('./assets/img/bg_main.jpg')">
+     <div class="page-header min-vh-50 relative" style="background-image: url('./assets/img/bg_main.jpg')">
          <span class="mask bg-gradient-primary opacity-4"></span>
          <div class="container">
              <div class="row">
@@ -30,11 +30,11 @@
      </div>
  </header>
 
- <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
-     <section class="my-5 py-5">
-         <div class="container mt-sm-5 mt-3">
+ <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n9">
+     <section class="my-1 py-1">
+         <div class="container mt-sm-5 mt-3 mb-0">
              <div class="row justify-content-center">
-                 <div class="col-sm-8">
+                 <div class="col-sm-12">
                      <?php if (!isset($_SESSION['topic'])) { ?>
                          <div class="position-sticky pb-lg-5 pb-3 mx-md-5 mt-lg-0 mt-0 ps-2" style="top: 100px">
                              <h3>And Your Topic Is...</h3>
@@ -56,7 +56,7 @@
                                  <div class="col-lg pxy-6">
                                      <div class="position-relative border-radius-md overflow-hidden shadow-lg mb-7">
                                          <div class="container border-bottom">
-                                             <div class="row justify-space-between py-2">
+                                             <div class="row justify-space-between py-2 mb-0">
                                                  <div class="col-lg-8 me-auto">
                                                      <p class="lead text-dark pt-1 mb-0"><?php if (!isset($result)) { echo 'Choose your topic'; } else { echo $result; }; ?></p>
                                                  </div>
@@ -81,7 +81,7 @@
                          <?php } else if (isset($_SESSION['topic']) && $logged_in) { ?>
                              <!-- Questions -->
                              <div class="col-12">
-                                 <div class="position-relative border-radius-md overflow-hidden shadow-lg mb-7">
+                                 <div class="position-relative border-radius-md overflow-hidden shadow-lg mb-0">
                                      <div class="container border-bottom">
                                          <div class="row justify-space-between py-2">
                                              <div class="col-lg-3 me-auto">
@@ -98,28 +98,33 @@
 
                                                      <?php
                                                         if (isset($result)) {
-                                                            echo '<p class="lead text-dark pt-1 mb-0">' . $result . '</p>';
+                                                            /* echo "<span style='text-align: left;'>"; */
+                                                            echo '<p class="lead text-dark px-5 mx-auto text-start text-md-center">' . $result . '</p>';
+                                                            /* echo "</span>"; */
                                                         } else if (isset($_SESSION['current_question'])) {
-                                                            echo '<p class="lead text-dark pt-1 mb-0">' . $current_question['question'] . '</p>';
+                                                            /* echo "<span style='text-align: left;'>"; */
+                                                            echo '<p class="lead text-dark px-5 mx-auto text-start text-md-center">' . $current_question['question'] . '</p>';
+                                                            /* echo "</span>"; */
                                                             echo '<form method="post">';
-                                                            echo '<div class="row text-center py-2 mt-3"><div class="col-3 mx-auto text-start">';
+                                                            echo '<div class="row text-center py-2 px-4 mt-3">
+                                                                    <div class="col-sm-8 col-md-6 mx-auto">';
                                                             for ($i = 0; $i < count($answers); $i++) {
                                                                 if ($current_question['type'] == 'SINGLE') {
-                                                                    echo '<div class="form-check">';
+                                                                    echo '<div class="form-check text-start">';
                                                                     echo '<input class="form-check-input" type="radio" name="answer" value="' . ($i + 1) . '" id="flexRadioDefault' . ($i + 1) . '" required>';
                                                                     echo '<label class="form-check-label" for="flexRadioDefault' . ($i + 1) . '">' . $answers[$i]['answer'] . '</label>';
                                                                     echo '</div>';
                                                                 } else if ($current_question['type'] == 'MULTIPLE') {
-                                                                    echo '<div class="form-check">';
+                                                                    echo '<div class="form-check text-start">';
                                                                     echo '<input class="form-check-input" type="checkbox" name="answer" value="' . ($i + 1) . '" id="flexCheckDefault' . ($i + 1) . '">';
                                                                     echo '<label class="form-check-label" for="flexCheckDefault' . ($i + 1) . '">' . $answers[$i]['answer'] . '</label>';
                                                                     echo '</div>';
                                                                 }
                                                             }
-                                                            echo '<button type="submit" name="next" class="btn btn-primary">Next Question</button>';
-                                                            echo '<button type="submit" name="back" class="btn btn-primary">Last Question</button>';
-                                                            echo '</div>';
-                                                            echo '</div>';
+                                                            /* echo '<div class="d-flex flex-wrap justify-content-between">'; */
+                                                            echo '<button type="submit" name="next" class="btn btn-primary mx-auto px-2 me-2 mt-0">Next Question</button>';
+                                                            echo '<button type="submit" name="back" class="btn btn-primary mx-auto px-2 me-2 mt-0">Last Question</button>';
+                                                            /* echo '</div>';  */                       
                                                             echo '</form>';
                                                         }
                                                         ?>

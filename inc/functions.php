@@ -164,6 +164,7 @@ function getrealip()
     }
     return $realip;
 }
+// FOR BETTER READABILITY (OPTIONAL), can be exchanged with ucwords ----------------------------------------------------------------
 
 $topicNameMap = [
     'geography' => 'Geography',
@@ -172,7 +173,5 @@ $topicNameMap = [
     'animals' => 'Animals',
     'movies' => 'Movies',
     'gen-knowledge' => 'General Knowledge',
-    'astronautics' => 'Astronautics'
-
-    
+    'astronautics' => 'Astronautics' 
 ];
