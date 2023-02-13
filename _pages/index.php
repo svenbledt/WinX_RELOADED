@@ -123,10 +123,10 @@
                                                             }
                                                             echo '<button type="submit" name="next" class="btn mx-auto px-2 me-2 mt-2">
                                                             <i class="fa-light fa-circle-arrow-right fa-4x">
-                                                            <p class="btnFont py-1" style="font-family: Poppins, sans-serif;">Next Question</p></i></button>';
+                                                            <p class="btnFont py-1" style="font-family: Poppins, sans-serif; font-size: 20%">next question</p></i></button>';
                                                             echo '<button type="submit" name="back" class="btn mx-auto px-2 me-2 mt-2">
                                                             <i class="fa-light fa-forward-step fa-4x">
-                                                            <p class="btnFont py-1" style="font-family: Poppins, sans-serif;">Last Question</p></i></button>';                      
+                                                            <p class="btnFont py-1" style="font-family: Poppins, sans-serif; font-size: 20%">last question</p></i></button>';                      
                                                             echo '</form>';
                                                         }
                                                         ?>
