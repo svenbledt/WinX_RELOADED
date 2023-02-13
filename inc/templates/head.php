@@ -118,9 +118,9 @@ if (isset($_POST['next'])) {
 
     <link id="pagestyle" href="./assets/css/style.css?v=3.0.4" rel="stylesheet" />
 
-    <!-- Animate-style-liprary css cdn -->
+    <!-- Animate-style-library css cdn -->
 
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
 
 </head>

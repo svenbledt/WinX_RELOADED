@@ -231,12 +231,13 @@ echo '<button type="submit" name="back" class="btn btn-primary mx-auto px-2 me-2
   background: linear-gradient(180deg, rgba(72,27,255,1) 0%, rgba(204,236,255,1) 8%, rgba(255,255,255,1) 100%);
 } */
 
-
 </style>
 
 <i class="fa-light fa-forward-step"></i>
 
+<!-- Animate-style-library css cdn -->
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
 
 <?php echo ucfirst($topic);  ?> 
