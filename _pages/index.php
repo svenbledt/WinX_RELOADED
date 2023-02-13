@@ -49,7 +49,7 @@
                      <?php } ?>
                  </div>
                  <div class="row justify-content-center">
-                 <div class="col-sm-12 mt-0 animate__animated animate__rollIn">
+                 <div class="col-sm-12 mt-0 animate__animated animate__fadeInBottomRight">
                          <?php if (!isset($_SESSION['topic']) && isset($_SESSION['LOGGEDIN']) && $_SESSION['LOGGEDIN'] == true) { ?>
                              <!-- Questions -->
                              <form action="" method="post">
@@ -110,25 +110,33 @@
                                                                     <div class="col-sm-8 col-md-6 mx-auto">';
                                                             for ($i = 0; $i < count($answers); $i++) {
                                                                 if ($current_question['type'] == 'SINGLE') {
-                                                                    echo '<div class="form-check text-start">';
+                                                                    echo '<div class="form-check text-start py-2">';
                                                                     echo '<input class="form-check-input" type="radio" name="answer" value="' . ($i + 1) . '" id="flexRadioDefault' . ($i + 1) . '" required>';
-                                                                    echo '<label class="form-check-label" for="flexRadioDefault' . ($i + 1) . '">' . $answers[$i]['answer'] . '</label>';
+                                                                    echo '<label class="form-check-label my-1" for="flexRadioDefault' . ($i + 1) . '">' . $answers[$i]['answer'] . '</label>';
                                                                     echo '</div>';
                                                                 } else if ($current_question['type'] == 'MULTIPLE') {
-                                                                    echo '<div class="form-check text-start">';
+                                                                    echo '<div class="form-check text-start py-2">';
                                                                     echo '<input class="form-check-input" type="checkbox" name="answer" value="' . ($i + 1) . '" id="flexCheckDefault' . ($i + 1) . '">';
-                                                                    echo '<label class="form-check-label" for="flexCheckDefault' . ($i + 1) . '">' . $answers[$i]['answer'] . '</label>';
+                                                                    echo '<label class="form-check-label my-1" for="flexCheckDefault' . ($i + 1) . '">' . $answers[$i]['answer'] . '</label>';
                                                                     echo '</div>';
                                                                 }
                                                             }
-                                                            /* echo '<div class="d-flex flex-wrap justify-content-between">'; */
-                                                            echo '<button type="submit" name="next" class="btn btn-primary mx-auto px-2 me-2 mt-0">Next Question</button>';
-                                                            echo '<button type="submit" name="back" class="btn btn-primary mx-auto px-2 me-2 mt-0">Last Question</button>';
-                                                            /* echo '</div>';  */                       
+                                                            echo '<button type="submit" name="next" class="btn mx-auto px-2 me-2 mt-2">
+                                                            <i class="fa-light fa-circle-arrow-right fa-4x">
+                                                            <p class="btnFont py-1" style="font-family: Poppins, sans-serif;">Next Question</p></i></button>';
+                                                            echo '<button type="submit" name="back" class="btn mx-auto px-2 me-2 mt-2">
+                                                            <i class="fa-light fa-forward-step fa-4x">
+                                                            <p class="btnFont py-1" style="font-family: Poppins, sans-serif;">Last Question</p></i></button>';                      
                                                             echo '</form>';
                                                         }
                                                         ?>
                                                  </div>
+                                             </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-sm-2 m-3">
+                                                        <a href="#" role="button"><i class="fa-light fa-circle-arrow-up fa-2x"><p class="btnFont py-1" style="font-family: Poppins, sans-serif;">Up!</p></i></a>
+                                                    </div>
+                                                </div>
                                              </div>
                                          </div>
                                      </div>
