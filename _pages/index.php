@@ -48,7 +48,7 @@
                      <?php } ?>
                  </div>
                  <div class="row justify-content-center">
-                 <div class="col-sm-12 mt-0">
+                     <div class="col-sm-12 mt-0">
                          <?php if (!isset($_SESSION['topic']) && isset($_SESSION['LOGGEDIN']) && $_SESSION['LOGGEDIN'] == true) { ?>
                              <!-- Questions -->
                              <form action="" method="post">
@@ -57,7 +57,11 @@
                                          <div class="container border-bottom">
                                              <div class="row justify-space-between py-2">
                                                  <div class="col-lg-8 me-auto">
-                                                     <p class="lead text-dark pt-1 mb-0"><?php if (!isset($result)) { echo 'Choose your topic'; } else { echo $result; }; ?></p>
+                                                     <p class="lead text-dark pt-1 mb-0"><?php if (!isset($result)) {
+                                                                                                echo 'Choose your topic';
+                                                                                            } else {
+                                                                                                echo $result;
+                                                                                            }; ?></p>
                                                  </div>
                                              </div>
                                          </div>
@@ -66,8 +70,8 @@
                                                  <div class="row text-center px-3 mt-3">
                                                      <div class="col-12 mx-auto">
                                                          <select name="topic" class="form-select form-select-lg my-3" aria-label=".form-select-lg example">
-                                                         <?php foreach ($topics as $topic) { ?>
-                                                            <option value="<?php echo $topic['topic']; ?>"><?php echo $topicNameMap[$topic['topic']]; ?></option><?php } ?>
+                                                             <?php foreach ($topics as $topic) { ?>
+                                                                 <option value="<?php echo $topic['topic']; ?>"><?php echo $topicNameMap[$topic['topic']]; ?></option><?php } ?>
                                                          </select>
                                                          <button type="submit" class="btn btn-secondary">Start Quiz</button>
                                                      </div>
@@ -155,6 +159,7 @@
                                  </div>
                              </div>
                          <?php } ?>
-                    </div>
+                     </div>
                  </div>
      </section>
+ </div>

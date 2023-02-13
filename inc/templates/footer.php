@@ -99,7 +99,7 @@
   <!--  Google Maps Plugin    -->
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-  <script src="./assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+  <script src="./assets/js/main.min.js?v=3.0.4" type="text/javascript"></script>
 
 
   <script type="text/javascript">

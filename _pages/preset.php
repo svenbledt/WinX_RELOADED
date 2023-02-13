@@ -833,7 +833,7 @@
 
           <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
           <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-          <script src="https://demos.creative-tim.com/material-kit/assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+          <script src="https://demos.creative-tim.com/material-kit/assets/js/main.min.js?v=3.0.4" type="text/javascript"></script>
           '></iframe>
                                      </div>
                                      <div class="tab-pane" id="code-avatar">
@@ -920,7 +920,7 @@
 
           <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
           <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-          <script src="https://demos.creative-tim.com/material-kit/assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+          <script src="https://demos.creative-tim.com/material-kit/assets/js/main.min.js?v=3.0.4" type="text/javascript"></script>
           '></iframe>
                                      </div>
                                      <div class="tab-pane" id="code-avatar-size">
