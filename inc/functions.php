@@ -158,7 +158,7 @@ function getrealip()
 // get image_name from images table
 function getQuestionImage($conn, $image)
 {
-    $sql = "SELECT * FROM questions WHERE image = :image";
+    $sql = "SELECT image FROM questions WHERE topic = :image";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':type', $image, PDO::PARAM_STR);
     $stmt->execute();
