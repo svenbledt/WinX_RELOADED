@@ -30,7 +30,7 @@
      </div>
  </header>
 
- <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n9" style="background: linear-gradient(180deg, rgba(255,145,192,1) 0%, rgba(255,204,232,1) 5%, rgba(255,255,255,1) 100%);">
+ <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n9" >
      <section class="my-1 py-1">
          <div class="container mt-sm-5 mt-3 mb-0">
              <div class="row justify-content-center">
@@ -70,9 +70,9 @@
                                                          <?php foreach ($topics as $topic) { ?>
                                                             <option value="<?php echo $topic['topic']; ?>"><?php echo ucwords($topic['topic']); ?></option><?php } ?>
                                                          </select>                                                                      
-                                                         <button type="submit" class="btn">
+                                                            <button type="submit" class="btn1 btn-round border-0 text-secondary">
                                                             <i class="fa-light fa-circle-arrow-right fa-4x">
-                                                            <p style="font-family: Poppins, sans-serif; font-weight:bold; font-size: 30%">Start Quiz</p></i></button>';
+                                                            <p style="font-family: Poppins, sans-serif; font-weight:bold; font-size: 20%">Start Quiz</p></i></button>
                                                      </div>
                                                  </div>
                                              </div>
@@ -123,10 +123,10 @@
                                                                     echo '</div>';
                                                                 }
                                                             }
-                                                            echo '<button type="submit" name="next" class="btn mx-auto px-2 me-2 mt-2">
+                                                            echo '<button type="submit" name="next" class="btn1 border-0 text-secondary mx-auto px-2 me-2 mt-2">
                                                             <i class="fa-light fa-circle-arrow-right fa-4x">
                                                             <p style="font-family: Poppins, sans-serif; font-size: 25%">next question</p></i></button>';
-                                                            echo '<button type="submit" name="back" class="btn mx-auto px-2 me-2 mt-2">
+                                                            echo '<button type="submit" name="back" class="btn1 border-0 text-secondary mx-auto px-2 me-2 mt-2">
                                                             <i class="fa-light fa-forward-step fa-4x">
                                                             <p style="font-family: Poppins, sans-serif; font-size: 25%">last question</p></i></button>';                      
                                                             echo '</form>';

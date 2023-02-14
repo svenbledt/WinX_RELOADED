@@ -28552,3 +28552,38 @@ pre[class*="language-"] {
 }
 
 /*# sourceMappingURL=kit-free.css.map */
+
+/* .custom-button {
+  background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    transition: background-color 0.2s ease-in-out;
+}
+.custom-button:hover,
+.custom-button:focus 
+{
+    background-color: #007bff;
+    color: #fff;
+  } */
+
+  .btn1 {
+    background-color:var(--bs-btn-bg);
+  }
+
+  .btn1-round {
+    border-radius: 50%;
+  }
+
+
+
+
+
+
+
