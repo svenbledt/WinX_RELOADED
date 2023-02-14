@@ -28564,11 +28564,18 @@ pre[class*="language-"] {
 }
 
 .Geography {
-  background: linear-gradient(180deg, rgba(72,27,255,1) 0%, rgba(204,236,255,1) 8%, rgba(255,255,255,1) 100%);
+  background: rgb(221,106,12);
+  background: linear-gradient(0deg, rgba(221,106,12,1) 0%, rgba(232,213,193,1) 12%, rgba(252,234,222,1) 22%, rgba(255,255,255,1) 100%);
 }
 
 .Astronautics {
-  background: linear-gradient(180deg, rgba(27,255,172,1) 0%, rgba(206,255,234,1) 29%, rgba(204,255,245,1) 40%, rgba(255,255,255,1) 100%);
+  background: rgb(93,155,252);
+  background: linear-gradient(0deg, rgba(93,155,252,1) 0%, rgba(206,234,255,1) 12%, rgba(204,255,242,1) 29%, rgba(255,255,255,1) 100%);
+}
+
+.topicX {
+  background: rgb(93,155,252);
+  background: linear-gradient(0deg, rgba(93,155,252,1) 0%, rgba(206,234,255,1) 12%, rgba(204,255,242,1) 29%, rgba(255,255,255,1) 100%);
 }
 
 

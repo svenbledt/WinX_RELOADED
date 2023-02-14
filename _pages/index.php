@@ -15,6 +15,12 @@
         $_SESSION['current_question'] = 0;
     }
 
+    $stmt = $conn->prepare("SELECT image FROM questions WHERE topic = :topic");
+    $stmt->bindParam(':topic', $_SESSION['topic']);
+    $stmt->execute();
+    $resultImgQuery = $stmt->fetch(PDO::FETCH_ASSOC);
+    $imageFilename = $resultImgQuery['image'];
+
     ?>
  <header class="header-2">
      <div class="page-header min-vh-50 relative" style="background-image: url(<?php echo './assets/img/' . $imageFilename; ?>)">
