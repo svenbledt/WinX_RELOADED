@@ -126,14 +126,33 @@ if (isset($_POST['next'])) {
 </head>
 
 <body class="index-page bg-gray-200">
-
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Get Access</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    You need to login to access this page.
+                    <br><br>
+                    If you don't have an account, you can create a new one
+                </div>
+                <div class="modal-footer justify-content-between">
+                <a href="index.php?page=sign-in"><button type="button" class="btn bg-gradient-dark mb-0">Login</button></a>
+                    <a href="index.php?page=register"><button type="button" class="btn bg-gradient-primary mb-0">Register</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Navbar -->
     <div class="container position-sticky z-index-sticky top-0">
         <div class="row">
             <div class="col-12">
                 <nav class="navbar navbar-expand-lg  blur border-radius-md top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
                     <div class="container-fluid px-0">
-                        <a class="navbar-brand font-weight-bolder ms-sm-3" href="index.php" rel="tooltip" title="Designed and Coded by Sven Bledt" data-placement="bottom" target="_blank">
+                        <a class="navbar-brand font-weight-bolder ms-sm-3" href="index.php?page=index" rel="tooltip" title="Designed and Coded by Sven Bledt" data-placement="bottom">
                             WinX Reloaded
                         </a>
                         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">

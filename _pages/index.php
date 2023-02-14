@@ -14,7 +14,7 @@
     if (!isset($_SESSION['current_question'])) {
         $_SESSION['current_question'] = 0;
     }
-    
+
     // Retrieve the image file name for the selected topic from the MySQL database
     $stmt = $conn->prepare("SELECT image FROM questions WHERE topic = :topic");
     $stmt->bindParam(':topic', $_SESSION['topic']);
@@ -22,9 +22,10 @@
     $resultImgQuery = $stmt->fetch(PDO::FETCH_ASSOC);
     $imageFilename = $resultImgQuery['image'];
 
+    $image = $_SESSION['topic'];
     ?>
  <header class="header-2">
-     <div class="page-header min-vh-50 relative" style="background-image: url(<?php echo './assets/img/' . $imageFilename; ?>)">
+     <div class="page-header min-vh-75 relative" style="background-image: url('./assets/img/<?php echo getQuestionImage($conn, $image);?>.jpg')">
          <span class="mask bg-gradient-primary opacity-4"></span>
          <div class="container">
              <div class="row">
@@ -65,7 +66,11 @@
                                          <div class="container border-bottom">
                                              <div class="row justify-space-between py-2 mb-0">
                                                  <div class="col-lg-8 me-auto">
-                                                     <p class="lead text-dark pt-1 mb-0"><?php if (!isset($result)) { echo 'Choose your topic'; } else { echo $result; }; ?></p>
+                                                     <p class="lead text-dark pt-1 mb-0"><?php if (!isset($result)) {
+                                                                                                echo 'Choose your topic';
+                                                                                            } else {
+                                                                                                echo $result;
+                                                                                            }; ?></p>
                                                  </div>
                                              </div>
                                          </div>
@@ -170,7 +175,7 @@
                                                      <p class="lead text-dark pt-1 mb-0">
                                                          <?php echo "You need to be logged in to take the quiz!"; ?>
                                                      </p>
-                                                     <a href="index.php?page=sign-in" class="btn btn-primary w-auto me-1 mb-0">Login</a>
+                                                     <a href="index.php?page=sign-in" class="btn bg-gradient-primary w-auto me-1 mb-0">Login</a>
                                                  </div>
                                              </div>
                                          </div>
@@ -178,6 +183,7 @@
                                  </div>
                              </div>
                          <?php } ?>
-                    </div>
+                     </div>
                  </div>
      </section>
+ </div>

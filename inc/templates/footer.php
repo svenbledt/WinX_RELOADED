@@ -22,17 +22,10 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link pe-1" href="https://twitter.com/svenbledt" target="_blank">
+                <a class="nav-link pe-1" href="https://twitter.com/sbledt" target="_blank">
                   <i class="fab fa-twitter text-lg opacity-8"></i>
                 </a>
               </li>
-
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://dribbble.com/svenbledt" target="_blank">
-                  <i class="fab fa-dribbble text-lg opacity-8"></i>
-                </a>
-              </li>
-
 
               <li class="nav-item">
                 <a class="nav-link pe-1" href="https://github.com/svenbledt" target="_blank">
@@ -40,11 +33,6 @@
                 </a>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://www.youtube.com/" target="_blank">
-                  <i class="fab fa-youtube text-lg opacity-8"></i>
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -114,7 +102,7 @@
   <!--  Google Maps Plugin    -->
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-  <script src="./assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+  <script src="./assets/js/main.min.js?v=3.0.4" type="text/javascript"></script>
 
 
   <script type="text/javascript">
