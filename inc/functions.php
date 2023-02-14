@@ -175,3 +175,11 @@ $topicNameMap = [
     'gen-knowledge' => 'General Knowledge',
     'astronautics' => 'Astronautics' 
 ];
+
+// Retrieve the image file name for the selected topic from the MySQL database
+$stmt = $conn->prepare("SELECT image FROM questions WHERE topic = :topic");
+$stmt->bindParam(':topic', $_SESSION['topic']);
+$stmt->execute();
+$resultImgQuery = $stmt->fetch(PDO::FETCH_ASSOC);
+$imageFilename = $resultImgQuery['image'];
+

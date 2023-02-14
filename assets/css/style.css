@@ -28553,35 +28553,23 @@ pre[class*="language-"] {
 
 /*# sourceMappingURL=kit-free.css.map */
 
-/* .custom-button {
-  background-color: transparent;
-    color: #007bff;
-    border: 2px solid #007bff;
-    border-radius: 50px;
-    width: 50px;
-    height: 50px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-    transition: background-color 0.2s ease-in-out;
+/* CSS GAUDENZ PROPRIETAR-------------------------------------------------------- */
+
+.btn1 {
+  background-color:var(--bs-btn-bg);
 }
-.custom-button:hover,
-.custom-button:focus 
-{
-    background-color: #007bff;
-    color: #fff;
-  } */
 
-  .btn1 {
-    background-color:var(--bs-btn-bg);
-  }
+.btn1-round {
+  border-radius: 50%;
+}
 
-  .btn1-round {
-    border-radius: 50%;
-  }
+.Geography {
+  background: linear-gradient(180deg, rgba(72,27,255,1) 0%, rgba(204,236,255,1) 8%, rgba(255,255,255,1) 100%);
+}
 
-
+.Astronautics {
+  background: linear-gradient(180deg, rgba(27,255,172,1) 0%, rgba(206,255,234,1) 29%, rgba(204,255,245,1) 40%, rgba(255,255,255,1) 100%);
+}
 
 
 

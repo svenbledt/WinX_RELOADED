@@ -17,7 +17,7 @@
 
     ?>
  <header class="header-2">
-     <div class="page-header min-vh-50 relative" style="background-image: url('./assets/img/bg_main.jpg')">
+     <div class="page-header min-vh-50 relative" style="background-image: url(<?php echo './assets/img/' . $imageFilename; ?>)">
          <span class="mask bg-gradient-primary opacity-4"></span>
          <div class="container">
              <div class="row">
@@ -30,7 +30,7 @@
      </div>
  </header>
 
- <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n9" >
+ <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n9 <?php echo $_SESSION['topic'];?>">
      <section class="my-1 py-1">
          <div class="container mt-sm-5 mt-3 mb-0">
              <div class="row justify-content-center">
@@ -136,7 +136,7 @@
                                              </div>
                                                 <div class="row justify-content-center">
                                                     <div class="col-sm-2 m-3">
-                                                        <a href="#" role="button"><i class="fa-light fa-circle-arrow-up fa-2x"><p style="font-family: Poppins, sans-serif;">Up!</p></i></a>
+                                                        <a href="#" class="btn1 border-0 text-secondary"><i class="fa-light fa-circle-arrow-up fa-2x"><p style="font-family: Poppins, sans-serif;">Up!</p></i></a>
                                                     </div>
                                                 </div>
                                              </div>
@@ -163,7 +163,6 @@
                                                      <p class="lead text-dark pt-1 mb-0">
                                                          <?php echo "You need to be logged in to take the quiz!"; ?>
                                                      </p>
-                                                     
                                                      <a href="index.php?page=sign-in" class="btn btn-primary w-auto me-1 mb-0">Login</a>
                                                  </div>
                                              </div>

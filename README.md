@@ -43,7 +43,7 @@
 
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Bootstrap_5.2](https://getbootstrap.com/)
-* [FIGMA](https://) for layout improvment
+* [FIGMA](https://www.figma.com/file/WvnuFdc8VXnEzWyWyrSheU/winxReloaded?node-id=0%3A1&t=2ecVyyduPw9fGSsu-1) for layout improvment
 * [AOS-Animate On Scroll](https://michalsnik.github.io/aos/)
 * [Animate.css](https://animate.style/)
 * [Github](https://github.com/svenbledt/WinX_RELOADED) (for file repo/sharing/workflow)
