@@ -17,12 +17,27 @@ if (!isset($_SESSION['current_question'])) {
 
 
 
-// Retrieve the image file name for the selected topic from the MySQL database
+// Retrieve the image file name for the selected topic from the MySQL database and set placeholder if no topic set
+
+if (isset($_SESSION['topic'])) {
+    $stmt = $conn->prepare("SELECT image FROM questions WHERE topic = :topic");
+    $stmt->bindParam(':topic', $_SESSION['topic']);
+    $stmt->execute();
+    $resultImgQuery = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($resultImgQuery !== false) {
+      $imageFilename = $resultImgQuery['image'];
+        } else {
+      $imageFilename = null;
+        }
+    } else {
+    $imageFilename = null;
+}
+
+// Repeat query topic for generation fo class attribute used for backgroundcolor-styling for each topic (ln58 end)
 $stmt = $conn->prepare("SELECT image FROM questions WHERE topic = :topic");
 $stmt->bindParam(':topic', $_SESSION['topic']);
 $stmt->execute();
-$resultImgQuery = $stmt->fetch(PDO::FETCH_ASSOC);
-$imageFilename = $resultImgQuery['image'];
 
 ?>
 
@@ -49,12 +64,12 @@ $imageFilename = $resultImgQuery['image'];
                      <div class="position-sticky pb-lg-5 pb-3 mx-md-5 mt-lg-0 mt-0 ps-2" style="top: 100px">
                          <h3>And Your Topic Is...</h3>
                          <p></p>
-                         <h6 class="text-secondary font-weight-normal pe-3">Please choose the category of the quiz you wanna do!</h6>
+                         <h5 class="lead text-dark font-weight-normal pe-3">Please choose the category of the quiz you wanna do!</h5>
                      </div>
                  <?php } else { ?>
                      <div class="position-sticky pb-lg-5 pb-3 mx-md-5 mt-lg-0 mt-0 ps-2" style="top: 100px">
                          <h3>Have Fun</h3>
-                         <h6 class="text-secondary font-weight-normal pe-3">Have fun answering the Questions of the quiz!</h6>
+                         <h5 class="lead text-dark font-weight-normal pe-3">Have fun answering the Questions of the quiz!</h5>
                      </div>
                  <?php } ?>
              </div>
@@ -78,7 +93,7 @@ $imageFilename = $resultImgQuery['image'];
                                                  <div class="col-12 mx-auto">
                                                      <select name="topic" class="form-select form-select-lg my-3" aria-label=".form-select-lg example">
                                                      <?php foreach ($topics as $topic) { ?>
-                                                        <option value="<?php echo $topic['topic']; ?>"><?php echo $topicNameMap[$topic['topic']];; ?></option><?php } ?>
+                                                        <option value="<?php echo $topic['topic']; ?>"><?php echo ucfirst($topic['topic']); ?></option><?php } ?>
                                                      </select>                                                                      
                                                         <button type="submit" class="btn1 btn-round border-0 text-secondary">
                                                         <i class="fa-light fa-circle-arrow-right fa-4x">
@@ -137,7 +152,7 @@ $imageFilename = $resultImgQuery['image'];
                                                         <i class="fa-light fa-circle-arrow-right fa-4x">
                                                         <p style="font-family: Poppins, sans-serif; font-size: 25%">next question</p></i></button>';
                                                         echo '<button type="submit" name="back" class="btn1 border-0 text-secondary mx-auto px-2 me-2 mt-2">
-                                                        <i class="fa-light fa-forward-step fa-4x">
+                                                        <i class="fa-light fa-forward-step fa-3x">
                                                         <p style="font-family: Poppins, sans-serif; font-size: 25%">last question</p></i></button>';                      
                                                         echo '</form>';
                                                     }

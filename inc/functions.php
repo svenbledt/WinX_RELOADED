@@ -175,7 +175,9 @@ $topicNameMap = [
     'animals' => 'Animals',
     'movies' => 'Movies',
     'gen-knowledge' => 'General Knowledge',
-    'astronautics' => 'Astronautics' 
+    'astronautics' => 'Astronautics',
+    'general' => 'General' 
+
 ];
 
 
