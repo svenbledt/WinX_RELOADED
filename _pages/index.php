@@ -47,15 +47,15 @@ $stmt->execute();
      <div class="container">
          <div class="row">
              <div class="col-lg-7 text-center mx-auto">
-                 <h1 class="text-white pt-3 mt-n5">WinX Reloaded</h1>
-                 <p class="lead text-white mt-3">Are you ready for the Ultimate Quiz experience. <br /> Join the fun today.</p>
+                 <h2 class="text-white pt-3 mt-n8">WinX Reloaded <br>- you're smart aint'ya?</h2>
+                 <!-- <p class="lead text-white mt-3">Are you ready for the Ultimate Quiz experience. <br /> Join the fun today.</p> -->
              </div>
          </div>
      </div>
  </div>
 </header>
 
-<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n9 <?php echo $_SESSION['topic'];?>">
+<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n11 <?php echo $_SESSION['topic'];?>">
  <section class="my-1 py-1">
      <div class="container mt-sm-5 mt-3 mb-0">
          <div class="row justify-content-center">
