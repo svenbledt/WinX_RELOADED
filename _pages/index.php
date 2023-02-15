@@ -15,6 +15,8 @@ if (!isset($_SESSION['current_question'])) {
     $_SESSION['current_question'] = 0;
 }
 
+
+
 // Retrieve the image file name for the selected topic from the MySQL database
 $stmt = $conn->prepare("SELECT image FROM questions WHERE topic = :topic");
 $stmt->bindParam(':topic', $_SESSION['topic']);
@@ -23,9 +25,10 @@ $resultImgQuery = $stmt->fetch(PDO::FETCH_ASSOC);
 $imageFilename = $resultImgQuery['image'];
 
 ?>
+
 <header class="header-2">
- <div class="page-header min-vh-50 relative" style="background-image: url(<?php echo './assets/img/' . $imageFilename; ?>)">
-     <span class="mask bg-gradient-primary opacity-4"></span>
+ <div class="page-header min-vh-50 relative" style="background-image: url(<?php echo isset($imageFilename) ? './assets/img/'.$imageFilename : './assets/img/placeholder.jpg'; ?>)">
+     <span class="mask bg-gradient-primary opacity-2"></span>
      <div class="container">
          <div class="row">
              <div class="col-lg-7 text-center mx-auto">
@@ -75,7 +78,7 @@ $imageFilename = $resultImgQuery['image'];
                                                  <div class="col-12 mx-auto">
                                                      <select name="topic" class="form-select form-select-lg my-3" aria-label=".form-select-lg example">
                                                      <?php foreach ($topics as $topic) { ?>
-                                                        <option value="<?php echo $topic['topic']; ?>"><?php echo ucwords($topic['topic']); ?></option><?php } ?>
+                                                        <option value="<?php echo $topic['topic']; ?>"><?php echo $topicNameMap[$topic['topic']];; ?></option><?php } ?>
                                                      </select>                                                                      
                                                         <button type="submit" class="btn1 btn-round border-0 text-secondary">
                                                         <i class="fa-light fa-circle-arrow-right fa-4x">
@@ -108,11 +111,11 @@ $imageFilename = $resultImgQuery['image'];
                                                  <?php
                                                     if (isset($result)) {
                                                         /* echo "<span style='text-align: left;'>"; */
-                                                        echo '<p class="lead text-dark px-5 mx-auto text-start text-md-center">' . $result . '</p>';
+                                                        echo '<h4 class="lead text-dark px-5 mx-auto text-start text-md-center">' . $result . '</h4>';
                                                         /* echo "</span>"; */
                                                     } else if (isset($_SESSION['current_question'])) {
                                                         /* echo "<span style='text-align: left;'>"; */
-                                                        echo '<p class="lead text-dark px-5 mx-auto text-start text-md-center">' . $current_question['question'] . '</p>';
+                                                        echo '<h4 class="lead text-dark px-5 mx-auto text-start text-md-center">' . $current_question['question'] . '</h4>';
                                                         /* echo "</span>"; */
                                                         echo '<form method="post">';
                                                         echo '<div class="row text-center py-2 px-4 mt-3">
@@ -170,7 +173,8 @@ $imageFilename = $resultImgQuery['image'];
                                                  <p class="lead text-dark pt-1 mb-0">
                                                      <?php echo "You need to be logged in to take the quiz!"; ?>
                                                  </p>
-                                                 <a href="index.php?page=sign-in" class="btn btn-primary w-auto me-1 mb-0">Login</a>
+                                                 <a href="index.php?page=sign-in" class="btn1 btn1-round border-0 text-secondary w-auto me-3 mb-0"><i class="fa-light fa-right-to-bracket fa-4x"><p style="font-family: Poppins, sans-serif;">Login</p></i></a>
+                                                 
                                              </div>
                                          </div>
                                      </div>
