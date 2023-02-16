@@ -154,6 +154,7 @@ function getrealip()
     }
     return $realip;
 }
+// FOR BETTER READABILITY (OPTIONAL), can be exchanged with ucwords ----------------------------------------------------------------
 
 // get image_name from images table
 function getQuestionImage($conn, $image)
@@ -173,4 +174,12 @@ $topicNameMap = [
     'ch-norris' => 'Chuck Norris',
     'animals' => 'Animals',
     'movies' => 'Movies',
+    'gen-knowledge' => 'General Knowledge',
+    'astronautics' => 'Astronautics',
+    'general' => 'General' 
+
 ];
+
+
+
+

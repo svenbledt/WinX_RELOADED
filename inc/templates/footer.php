@@ -2,7 +2,10 @@
 } else { ?>
   <footer class="footer pt-5 mt-5">
     <div class="container">
-      <div class=" row">
+      <div class="row">
+          <!-- <div class="col-md-3 mb-4 ms-auto">
+          <button type="button" class="btn btn-floating" id="btn-back-to-top"><i class="fa-light fa-circle-arrow-up fa-4x"></i></button>
+          </div> -->
         <div class="col-md-3 mb-4 ms-auto">
           <div>
             <a href="https://www.creative-tim.com/product/material-kit">
@@ -126,6 +129,33 @@
       } else {
         console.error(countUp2.error);
       };
+    }
+
+    /* Button to top scrolling ----------------------------------------------------------------- */
+    //Get the button
+    let mybutton = document.getElementById("btn-back-to-top");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
     }
   </script>
 

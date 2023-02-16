@@ -5211,6 +5211,10 @@ fieldset:disabled .btn {
   color: var(--bs-card-color);
 }
 
+.no-border {
+  border: 0;
+}
+
 .card-title {
   margin-bottom: var(--bs-card-title-spacer-y);
 }
@@ -5615,7 +5619,7 @@ fieldset:disabled .btn {
 }
 
 .page-item:not(:first-child) .page-link {
-  margin-left: calc(--pagination-border-width * -1);
+  margin-left: calc($pagination-border-width * -1);
 }
 
 .page-item:first-child .page-link {
@@ -20583,16 +20587,16 @@ fieldset:disabled .btn {
 
 .btn-secondary,
 .btn.bg-gradient-secondary {
-  box-shadow: 0 3px 3px 0 rgba(76, 128, 154, 0.15),
-    0 3px 1px -2px rgba(76, 128, 154, 0.2), 0 1px 5px 0 rgba(76, 128, 154, 0.15);
+  box-shadow: 0 3px 3px 0 rgba(, 128, 154, 0.15),
+    0 3px 1px -2px rgba(, 128, 154, 0.2), 0 1px 5px 0 rgba(, 128, 154, 0.15);
 }
 
 .btn-secondary:hover,
 .btn.bg-gradient-secondary:hover {
   background-color: #7b809a;
   border-color: #7b809a;
-  box-shadow: 0 14px 26px -12px rgba(76, 128, 154, 0.4),
-    0 4px 23px 0 rgba(76, 128, 154, 0.15), 0 8px 10px -5px rgba(76, 128, 154, 0.2);
+  box-shadow: 0 14px 26px -12px rgba(, 128, 154, 0.4),
+    0 4px 23px 0 rgba(, 128, 154, 0.15), 0 8px 10px -5px rgba(, 128, 154, 0.2);
 }
 
 .btn-secondary .btn.bg-outline-secondary,
@@ -21678,7 +21682,7 @@ fieldset:disabled .btn {
 
 .dark-version .fc-theme-standard td,
 .dark-version .fc-theme-standard th {
-  border-color: rgba(76, 128, 154, 0.3);
+  border-color: rgba(, 128, 154, 0.3);
 }
 
 .dark-version .dataTable-sorter::after {
@@ -22735,7 +22739,7 @@ label,
 .bg-gradient-faded-secondary {
   background-image: radial-gradient(
     370px circle at 80% 50%,
-    rgba(76, 128, 154, 0.6) 0,
+    rgba(, 128, 154, 0.6) 0,
     #626780 100%
   );
 }
@@ -22807,7 +22811,7 @@ label,
 .bg-gradient-faded-secondary-vertical {
   background-image: radial-gradient(
     200px circle at 50% 70%,
-    rgba(76, 128, 154, 0.3) 0,
+    rgba(, 128, 154, 0.3) 0,
     #7b809a 100%
   );
 }
@@ -28548,3 +28552,55 @@ pre[class*="language-"] {
 }
 
 /*# sourceMappingURL=kit-free.css.map */
+
+/* CSS GAUDENZ PROPRIETAR -------------------------------------------------------- */
+
+.btn1 {
+  background-color:var(--bs-btn-bg);
+}
+
+.btn1-round {
+  border-radius: 50%;
+}
+
+.Geography {
+  background: rgb(221,106,12);
+  background: linear-gradient(0deg, rgba(221,106,12,1) 0%, rgba(232,213,193,1) 12%, rgba(252,234,222,1) 22%, rgba(255,255,255,1) 100%);
+}
+
+.Astronautics {
+  background: rgb(93,155,252);
+  background: linear-gradient(0deg, rgba(93,155,252,1) 0%, rgba(206,234,255,1) 12%, rgba(204,255,242,1) 29%, rgba(255,255,255,1) 100%);
+}
+
+.Ch-norris {
+  background: rgb(126,40,28);
+  background: linear-gradient(0deg, rgba(126,40,28,1) 0%, rgba(251,146,100,1) 8%, rgba(255,209,186,1) 22%, rgba(255,249,203,1) 41%, rgba(255,255,255,1) 100%);
+}
+
+.Animals {
+  background: rgb(155,132,88);
+  background: linear-gradient(0deg, rgba(155,132,88,1) 0%, rgba(177,150,95,1) 8%, rgba(250,203,173,1) 22%, rgba(240,212,230,1) 41%, rgba(255,255,255,1) 100%);
+}
+
+.Movies {
+  background: rgb(226,37,66);
+  background: linear-gradient(0deg, rgba(226,37,66,1) 0%, rgba(198,145,169,1) 8%, rgba(250,203,173,1) 22%, rgba(255,218,216,1) 41%, rgba(255,255,255,1) 100%);
+}
+
+.Gen-knowledge {
+  background: rgb(213,118,71);
+  background: linear-gradient(0deg, rgba(213,118,71,1) 0%, rgba(255,203,140,1) 8%, rgba(252,234,222,1) 22%, rgba(255,255,255,1) 100%);
+}
+
+.Music {
+  background: rgb(105,140,141);
+  background: linear-gradient(0deg, rgba(105,140,141,1) 0%, rgba(238,177,217,1) 8%, rgba(224,255,190,1) 22%, rgba(255,255,255,1) 100%);
+}
+
+.General {
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(255,255,255,1) 22%, rgba(255,255,255,1) 41%, rgba(255,255,255,1) 100%);
+}
+
+
