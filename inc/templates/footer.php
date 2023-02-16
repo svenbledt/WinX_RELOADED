@@ -2,13 +2,16 @@
 } else { ?>
   <footer class="footer pt-5 mt-5">
     <div class="container">
-      <div class=" row">
+      <div class="row">
+          <!-- <div class="col-md-3 mb-4 ms-auto">
+          <button type="button" class="btn btn-floating" id="btn-back-to-top"><i class="fa-light fa-circle-arrow-up fa-4x"></i></button>
+          </div> -->
         <div class="col-md-3 mb-4 ms-auto">
           <div>
             <a href="https://www.creative-tim.com/product/material-kit">
               <img src="./assets/img/logo-ct-dark.png" class="mb-3 footer-logo" alt="main_logo">
             </a>
-            <h6 class="font-weight-bolder mb-4">Trivia Quiz</h6>
+            <h6 class="font-weight-bolder mb-4">WinX Reloaded</h6>
           </div>
           <div>
             <ul class="d-flex flex-row ms-n3 nav">
@@ -19,17 +22,10 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link pe-1" href="https://twitter.com/svenbledt" target="_blank">
+                <a class="nav-link pe-1" href="https://twitter.com/sbledt" target="_blank">
                   <i class="fab fa-twitter text-lg opacity-8"></i>
                 </a>
               </li>
-
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://dribbble.com/svenbledt" target="_blank">
-                  <i class="fab fa-dribbble text-lg opacity-8"></i>
-                </a>
-              </li>
-
 
               <li class="nav-item">
                 <a class="nav-link pe-1" href="https://github.com/svenbledt" target="_blank">
@@ -37,11 +33,6 @@
                 </a>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link pe-1" href="https://www.youtube.com/" target="_blank">
-                  <i class="fab fa-youtube text-lg opacity-8"></i>
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -76,7 +67,7 @@
             <p class="text-dark my-4 text-sm font-weight-normal">
               All rights reserved. Copyright © <script>
                 document.write(new Date().getFullYear())
-              </script> Trivia Quiz by <a href="svenbledt.github.io" target="_blank">Sven Bledt</a>.
+              </script> Trivia Quiz by <a href="svenbledt.github.io" target="_blank">Sven Bledt</a> & Team.
             </p>
           </div>
         </div>
@@ -111,7 +102,7 @@
   <!--  Google Maps Plugin    -->
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-  <script src="./assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+  <script src="./assets/js/main.min.js?v=3.0.4" type="text/javascript"></script>
 
 
   <script type="text/javascript">
@@ -138,6 +129,33 @@
       } else {
         console.error(countUp2.error);
       };
+    }
+
+    /* Button to top scrolling ----------------------------------------------------------------- */
+    //Get the button
+    let mybutton = document.getElementById("btn-back-to-top");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
     }
   </script>
 

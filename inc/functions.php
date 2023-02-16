@@ -89,16 +89,6 @@ function logout()
     session_destroy();
 }
 
-// update last login
-function updateLastLogin($conn, $email)
-{
-    $sql = "UPDATE users SET last_login = :last_login WHERE email = :email";
-    $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':last_login', getTimestamp(), PDO::PARAM_STR);
-    $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-    $stmt->execute();
-}
-
 // get user information
 function getUser($conn, $email)
 {
@@ -164,3 +154,32 @@ function getrealip()
     }
     return $realip;
 }
+// FOR BETTER READABILITY (OPTIONAL), can be exchanged with ucwords ----------------------------------------------------------------
+
+// get image_name from images table
+function getQuestionImage($conn, $image)
+{
+    $sql = "SELECT image FROM questions WHERE topic = :image";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':type', $image, PDO::PARAM_STR);
+    $stmt->execute();
+    $image = $stmt->fetch(PDO::FETCH_ASSOC);
+    $image_name = $image;
+    return $image_name;
+}
+
+$topicNameMap = [
+    'geography' => 'Geography',
+    'music' => 'Music',
+    'ch-norris' => 'Chuck Norris',
+    'animals' => 'Animals',
+    'movies' => 'Movies',
+    'gen-knowledge' => 'General Knowledge',
+    'astronautics' => 'Astronautics',
+    'general' => 'General' 
+
+];
+
+
+
+

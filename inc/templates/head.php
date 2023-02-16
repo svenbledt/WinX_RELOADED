@@ -49,7 +49,7 @@ if (isset($_POST['next'])) {
 
     // insert answer into database
     $timest = getTimestamp();
-    $correct = "SELECT correct FROM answers WHERE question_id = '" . $current_question['id'] . "' AND answer = '" . $_POST['answer'] . "'";
+    $correct = "SELECT is_correct FROM answers WHERE question_id = '" . $current_question['id'] . "' AND answer = '" . $_POST['answer'] . "'";
     $correct = $conn->query($correct);
 
     if ($correct == 1) {
@@ -109,27 +109,51 @@ if (isset($_POST['next'])) {
     <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
 
     <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link id="fontawesome" href="./assets/css/all.css" rel="stylesheet" />
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 
     <!-- CSS Files -->
 
-    <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+    <link id="pagestyle" href="./assets/css/style.css?v=3.0.4" rel="stylesheet" />
+
+    <!-- Animate-style-library css cdn -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
 
 </head>
 
 <body class="index-page bg-gray-200">
-
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Get Access</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    You need to login to access this page.
+                    <br><br>
+                    If you don't have an account, you can create a new one
+                </div>
+                <div class="modal-footer justify-content-between">
+                <a href="index.php?page=sign-in"><button type="button" class="btn bg-gradient-dark mb-0">Login</button></a>
+                    <a href="index.php?page=register"><button type="button" class="btn bg-gradient-primary mb-0">Register</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Navbar -->
     <div class="container position-sticky z-index-sticky top-0">
         <div class="row">
             <div class="col-12">
-                <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+                <nav class="navbar navbar-expand-lg  blur border-radius-md top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
                     <div class="container-fluid px-0">
-                        <a class="navbar-brand font-weight-bolder ms-sm-3" href="index.php" rel="tooltip" title="Designed and Coded by Sven Bledt" data-placement="bottom" target="_blank">
-                            Trivia Quiz
+                        <a class="navbar-brand font-weight-bolder ms-sm-3" href="index.php?page=index" rel="tooltip" title="Designed and Coded by Sven Bledt" data-placement="bottom">
+                            WinX Reloaded
                         </a>
                         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon mt-2">
@@ -204,9 +228,9 @@ if (isset($_POST['next'])) {
 
                                     <?php
                                     if (isset($_SESSION['LOGGEDIN']) && $_SESSION['LOGGEDIN'] == true) {
-                                        echo '<a href="index.php?page=index&logout=true" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0"><i class="fas fa-sign-out-alt"></i>' . $user['username'] . '</a>';
+                                        echo '<a href="index.php?page=index&logout=true" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0"><i class="fas fa-sign-out-alt mx-1"></i>' . $user['username'] . '</a>';
                                     } else {
-                                        echo '<a href="index.php?page=sign-in" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0"><i class="fas fa-sign-in-alt"></i>Login</a>';
+                                        echo '<a href="index.php?page=sign-in" class="btn btn-sm  bg-gradient-primary  mb-0 me-1 mt-2 mt-md-0"><i class="fas fa-sign-in-alt mx-1"></i>Login</a>';
                                     };
                                     ?>
 

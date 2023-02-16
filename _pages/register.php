@@ -31,18 +31,15 @@ if (isset($_POST['submit'])) {
                 exit;
             } else {
                 // Username is not valid
-                $msg = "Username must be at least 3 characters long and contain only letters and numbers.";
-                exit;
+                $msg = "Username must be at least 3 characters long and contain only letters and numbers without spaces.";
             }
         } else {
             // Email is not valid
             $msg = "Email is not valid";
-            exit;
         }
     } else {
         // Password is not valid
         $msg = "Password must be at least 8 characters long and contain at least one number, one uppercase letter and one lowercase letter.";
-        exit;
     }
 }
 ?>
@@ -97,7 +94,7 @@ if (isset($_POST['submit'])) {
                                 <label name="policy" class="form-check-label mb-0 ms-3" for="rememberMe">Accept pricacy policy and terms of use conditions</label>
                             </div>
                             <div class="text-center">
-                                <button type="submit" name="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Sign in</button>
+                                <button type="submit" name="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Register</button>
                             </div>
                             <p class="mt-4 text-sm text-center">
                                 <a href="index.php?page=sign-in">Already have an account</a>
@@ -132,7 +129,7 @@ if (isset($_POST['submit'])) {
 <script src="../assets/js/plugins/parallax.min.js"></script>
 <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
 <!--  Google Maps Plugin    -->
-<script src="../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+<script src="../assets/js/main.min.js?v=3.0.4" type="text/javascript"></script>
 </body>
 
 </html>

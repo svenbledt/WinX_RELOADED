@@ -53,17 +53,17 @@ if (isset($_POST['submit'])) {
               <div class="row mt-3">
                 <div class="col-2 text-center ms-auto">
                   <a class="btn btn-link px-3" href="javascript:;">
-                    <i class="fa fa-facebook text-white text-lg"></i>
+                  <i class="fa-brands fa-facebook text-white text-lg"></i>
                   </a>
                 </div>
                 <div class="col-2 text-center px-1">
                   <a class="btn btn-link px-3" href="javascript:;">
-                    <i class="fa fa-github text-white text-lg"></i>
+                    <i class="fa-brands fa-github text-white text-lg"></i>
                   </a>
                 </div>
                 <div class="col-2 text-center me-auto">
                   <a class="btn btn-link px-3" href="javascript:;">
-                    <i class="fa fa-google text-white text-lg"></i>
+                    <i class="fa-brands fa-google fa-4x text-white text-lg"></i>
                   </a>
                 </div>
               </div>
@@ -119,7 +119,7 @@ if (isset($_POST['submit'])) {
 <script src="../assets/js/plugins/parallax.min.js"></script>
 <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
 <!--  Google Maps Plugin    -->
-<script src="../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+<script src="../assets/js/main.min.js?v=3.0.4" type="text/javascript"></script>
 </body>
 
 </html>

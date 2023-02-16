@@ -1,68 +1,81 @@
-# Docker for local web development: a basic LEMP stack (Linux, Nginx, MySQL, PHP)
 
-## Content
+[![Quiz Winx reloaded](https://media.istockphoto.com/id/1223692043/vector/quiz-neon-text-banner-on-brick-wall-questions-team-game-quiz-night-poster-pub-neon-signboard.jpg?s=612x612&w=0&k=20&c=eqCWw4lF_ypcD9xKy7pu5QBNeqLASUWYnKZVdIjzNyc=)](https://github.com/svenbledt/WinX_RELOADED "Go to repo!")
 
-This branch contains a basic LEMP stack running on Docker and orchestrated by Docker Compose, including:
 
-- A container for Nginx;
-- A container for PHP;
-- A container for MySQL;
-- A container for phpMyAdmin;
+[![#WinX_Reloaded - Thrivia Quiz - Better, Bigger; More...](https://img.shields.io/static/v1?label=%23WinX_Reloaded&message=Thrivia+Quiz+-+Better%2C+Bigger%3B+More...&color=2ea44f&style=for-the-badge)](https://github.com/svenbledt/WinX_RELOADED)
+---
 
-## Prerequisites
+---
+# Trivia Quiz+ &#169;WinX_Reloaded
+## Project Task / Assignment 
+* Create a website with a trivia quiz and use all avaliable Web-Dev-Techniques (Html, Css, Js, Php, Bs5, [Github](https://github.com/Gaudenz77/Smart_Is_Beautiful_Project), [Figma](https://www.figma.com/file/8QEAAFkEbpSOTPGylIn5TE/Smart-Is-Beautiful---Figma?node-id=0%3A1&t=njYADqtgww2a73Bh-1))
+----
 
-Make sure [Docker Desktop for Mac or PC](https://www.docker.com/products/docker-desktop) is installed and running, or head [over here](https://docs.docker.com/install/) if you are a Linux user. You will also need a terminal running [Git](https://git-scm.com/).
 
-This setup also uses localhost's port 8000 for Nginx, so make sure it is available.
+## Performance Criteria:
+<ul>
+<li>Adapt and extend content, technologies and methods of the existing Trivia Quiz</li>
+<li>Website that functions well</li>
+<li>Improved quiz experience</li>
+<li>Complete responive design functionality</li>
+<li>Website needs to be more attractive and easier to use than the prototype</li>
+<li>Use PHP/PDO to manage connection and data from MySQL</li>
+<li>PHP data collection ($_POST, $_GET, $_SESSION) and HTML generation</li>
+</ul>
 
-## Directions of use
+----
+# IMPORTANT!
 
-Clone the repository and change the current directory for the project's root:
+If Databse cannot be importred correctly, either set your docker yaml before frist time library to `db_winx` when using the file included (db_winXReloaded_230216.sql), change the line 18 and 19 `db_winx` to `library` or use the database-backup from the simplon-brief, last attachment.
+Thnak you for aour understanding. If not working just feel free to ask. (mail below).
 
-```
-$ git clone https://github.com/opportunity-zh/opp-php-mysql.git
+# ->>>>
+## STATUS PROJECT: INCOMPLETE 
+## PS: git might not be public, Sven is advised to manage to make it public that.
+------------------------------
 
-$ cd opp-php-mysql
-```
+## Usage: Trivia Quiz
+<ol>
+<li>open Index.php-page</li>
+<li>login or register for an account and login</li>
+<li>chose your quiz topic</li>
+<li>answer all questions</li>
+<li style="color:red">(incomplete -> report shows up)</li>
+<li style="color:red">(incomplete -> stored in your account and you can logout and com back whenever you like)</li>
+<li style="color:red">(incomplete -> Do another quiz and improve your general knowledge)</li>
+</ol>
 
-Run the following command:
+## Thank you for your time.
+---
+### Any feedback or assisting constructive critique is welcome.<br> Feel free to reach out or text via [Mail@Me](mailto:gaudenzraiber@yahoo.de).
+----
+----
+## License:
+* none, free use
+----
+## Tools Used:
+* HTML, CSS, Javascript, PHP PDO, Heidisql, Nginx, Mysql
+* [Heidisql](https://www.heidisql.com//)
 
-```
-$ docker-compose up -d
-```
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Bootstrap_5.2](https://getbootstrap.com/)
+* [FIGMA](https://www.figma.com/file/WvnuFdc8VXnEzWyWyrSheU/winxReloaded?node-id=0%3A1&t=2ecVyyduPw9fGSsu-1) for layout improvment
+* [AOS-Animate On Scroll](https://michalsnik.github.io/aos/)
+* [Animate.css](https://animate.style/)
+* [Github](https://github.com/svenbledt/WinX_RELOADED) (for file repo/sharing/workflow)
+* Internet for research
+* imagination 
+* feeling for details
+* the will to learn, improve share knowledge throughout the whole team-experience
+----
+## Deliverables:
+<div style="text-align:center; font-size:20px">
 
-This may take a little bit of time, as some Docker images might need downloading.
+[Github](https://github.com/svenbledt/WinX_RELOADED)<br>
+[FIGMA](https://www.figma.com/file/WvnuFdc8VXnEzWyWyrSheU/winxReloaded?node-id=0%3A1&t=2ecVyyduPw9fGSsu-1)<br>
+[Trello](https://trello.com/invite/b/2ouVnlJZ/ATTI4df3af7021be8b59018b477eb209801c43ACF2BE/winxreloaded-q-team-red)
 
-## Explanation
+</div>
 
-The images used by the setup are listed and configured in [`docker-compose.yml`](https://github.com/opportunity-zh/opp-php-mysql/docker-compose.yml).
-
-When building and starting the containers based on the images for the first time, a MySQL database named `library` is automatically created (you can pick a different name for the MYSQL_DATABASE in the MySQL service's description in `docker-compose.yml`).
-
-The database data is persisted in its own local directory through the volume `db_data`, which is mounted onto MySQL's container. A phpMyAdmin interface is available at [localhost:8080](http://localhost:8080) (the database credentials are webDev / opport2022).
-
-## Cleaning up
-
-To stop the containers:
-
-```
-$ docker-compose stop
-```
-
-To destroy the containers:
-
-```
-$ docker-compose down
-```
-
-To destroy the containers and the associated volumes:
-
-```
-$ docker-compose down -v
-```
-
-To remove everything, including images and orphan containers:
-
-```
-$ docker-compose down -v --rmi all --remove-orphans
-```
+----
+### A production by [#WinXReloaded](https://github.com/svenbledt/WinX_RELOADED) / Team Red  
