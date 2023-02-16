@@ -161,7 +161,7 @@ $stmt->execute();
                                          </div>
                                             <div class="row justify-content-center">
                                                 <div class="col-sm-2 m-1">
-                                                    <a href="#" class="btn1 btn1-round border-0 text-secondary"><i class="fa-light fa-circle-arrow-up fa-2x"><p style="font-family: Poppins, sans-serif;" class="btn1 btn1-round ">Up!</p></i></a>
+                                                    <a href="#" class="btn1 btn1-round border-0 text-secondary"><i class="fa-light fa-circle-arrow-up fa-2x"><p style="font-family: Poppins, sans-serif;" class="btn1 btn1-round">Up!</p></i></a>
                                                 </div>
                                             </div>
                                          </div>
