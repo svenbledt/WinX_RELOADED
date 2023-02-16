@@ -23,6 +23,17 @@
 <li>PHP data collection ($_POST, $_GET, $_SESSION) and HTML generation</li>
 </ul>
 
+----
+# IMPORTANT!
+
+If Databse cannot be importred correctly, either set your docker yaml before frist time library to `db_winx` when using the file included (db_winXReloaded_230216.sql), change the line 18 and 19 `db_winx` to `library` or use the database-backup from the simplon-brief, last attachment.
+Thnak you for aour understanding. If not working just feel free to ask. (mail below).
+
+# ->>>>
+## STATUS PROJECT: INCOMPLETE 
+## PS: git might not be public, Sven is advised to manage to make it public that.
+------------------------------
+
 ## Usage: Trivia Quiz
 <ol>
 <li>open Index.php-page</li>
