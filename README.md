@@ -12,7 +12,7 @@
 ----
 
 
-## Performance criteria
+## Performance Criteria:
 <ul>
 <li>Adapt and extend content, technologies and methods of the existing Trivia Quiz</li>
 <li>Website that functions well</li>
@@ -23,10 +23,26 @@
 <li>PHP data collection ($_POST, $_GET, $_SESSION) and HTML generation</li>
 </ul>
 
+----
+# IMPORTANT!
+
+If Databse cannot be importred correctly, either set your docker yaml before frist time library to `db_winx` when using the file included (db_winXReloaded_230216.sql), change the line 18 and 19 `db_winx` to `library` or use the database-backup from the simplon-brief, last attachment.
+Thnak you for aour understanding. If not working just feel free to ask. (mail below).
+
+# ->>>>
+## STATUS PROJECT: INCOMPLETE 
+## PS: git might not be public, Sven is advised to manage to make it public that.
+------------------------------
+
 ## Usage: Trivia Quiz
 <ol>
 <li>open Index.php-page</li>
-<li>manual</li>
+<li>login or register for an account and login</li>
+<li>chose your quiz topic</li>
+<li>answer all questions</li>
+<li style="color:red">(incomplete -> report shows up)</li>
+<li style="color:red">(incomplete -> stored in your account and you can logout and com back whenever you like)</li>
+<li style="color:red">(incomplete -> Do another quiz and improve your general knowledge)</li>
 </ol>
 
 ## Thank you for your time.
@@ -34,20 +50,32 @@
 ### Any feedback or assisting constructive critique is welcome.<br> Feel free to reach out or text via [Mail@Me](mailto:gaudenzraiber@yahoo.de).
 ----
 ----
-## License
+## License:
 * none, free use
 ----
-## Tools used
-* HTML, CSS, Javascript, PHP PDO, Phpmyadmin, Nginx, Mysql
+## Tools Used:
+* HTML, CSS, Javascript, PHP PDO, Heidisql, Nginx, Mysql
+* [Heidisql](https://www.heidisql.com//)
+
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Bootstrap_5.2](https://getbootstrap.com/)
-* [Bootstrap_5.2](https://getbootstrap.com/)
-* [Bootstrap_5.2](https://getbootstrap.com/)
+* [FIGMA](https://www.figma.com/file/WvnuFdc8VXnEzWyWyrSheU/winxReloaded?node-id=0%3A1&t=2ecVyyduPw9fGSsu-1) for layout improvment
+* [AOS-Animate On Scroll](https://michalsnik.github.io/aos/)
 * [Animate.css](https://animate.style/)
 * [Github](https://github.com/svenbledt/WinX_RELOADED) (for file repo/sharing/workflow)
 * Internet for research
 * imagination 
 * feeling for details
+* the will to learn, improve share knowledge throughout the whole team-experience
+----
+## Deliverables:
+<div style="text-align:center; font-size:20px">
+
+[Github](https://github.com/svenbledt/WinX_RELOADED)<br>
+[FIGMA](https://www.figma.com/file/WvnuFdc8VXnEzWyWyrSheU/winxReloaded?node-id=0%3A1&t=2ecVyyduPw9fGSsu-1)<br>
+[Trello](https://trello.com/invite/b/2ouVnlJZ/ATTI4df3af7021be8b59018b477eb209801c43ACF2BE/winxreloaded-q-team-red)
+
+</div>
 
 ----
-### A production by [#WinXReloaded](https://github.com/svenbledt/WinX_RELOADED) / Team Red
+### A production by [#WinXReloaded](https://github.com/svenbledt/WinX_RELOADED) / Team Red  
