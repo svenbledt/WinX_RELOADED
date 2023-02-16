@@ -1,5 +1,7 @@
 [![Winx_Reloaded - Retrospective](https://img.shields.io/badge/Winx__Reloaded-Retrospective-2ea44f)](https://github.com/svenbledt/WinX_RELOADED/blob/gaudenz/retrospective.md)
 ---
+
+## presentation on [MIRO](https://miro.com/app/board/uXjVPm4Wws8=/?share_link_id=328087200142)
 # Retrospective
 * Daniel: Big thank you to the team. I could work on my old project. This gave me the chance to get a better understanding of the topic PHP PDO overall.
 * Gaudenz: As one might imagine it could be bad if your team dissolves...Meh, it was not. Sure I would have liked the whole project to success but I had a big time learning experience and countless challenges every day. To me that made at least my personal take of the project a success.
