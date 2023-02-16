@@ -61,7 +61,8 @@
 <div style="text-align:center; font-size:20px">
 
 [Github](https://github.com/svenbledt/WinX_RELOADED)<br>
-[FIGMA](https://www.figma.com/file/WvnuFdc8VXnEzWyWyrSheU/winxReloaded?node-id=0%3A1&t=2ecVyyduPw9fGSsu-1) 
+[FIGMA](https://www.figma.com/file/WvnuFdc8VXnEzWyWyrSheU/winxReloaded?node-id=0%3A1&t=2ecVyyduPw9fGSsu-1)<br>
+[Trello](https://trello.com/invite/b/2ouVnlJZ/ATTI4df3af7021be8b59018b477eb209801c43ACF2BE/winxreloaded-q-team-red)
 
 </div>
 
