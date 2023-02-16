@@ -47,7 +47,7 @@ $stmt->execute();
      <div class="container">
          <div class="row">
              <div class="col-lg-7 text-center mx-auto">
-                 <h2 class="text-white pt-3 mt-n8">WinX Reloaded <br>- you're smart aint'ya?</h2>
+                 <h2 class="text-white py-3 mt-n8" style="font-family:Poppins;">WinX Reloaded <br>- you're smart aint'ya?</h2>
                  <!-- <p class="lead text-white mt-3">Are you ready for the Ultimate Quiz experience. <br /> Join the fun today.</p> -->
              </div>
          </div>
@@ -55,26 +55,26 @@ $stmt->execute();
  </div>
 </header>
 
-<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n11 <?php echo $_SESSION['topic'];?>">
- <section class="my-1 py-1">
+<div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n12 mt-md-n11 <?php echo $_SESSION['topic'];?>">
+ <section class="my-0 py-1">
      <div class="container mt-sm-5 mt-3 mb-0">
          <div class="row justify-content-center">
              <div class="col-sm-12">
                  <?php if (!isset($_SESSION['topic'])) { ?>
-                     <div class="position-sticky pb-lg-5 pb-3 mx-md-5 mt-lg-0 mt-0 ps-2" style="top: 100px">
+                     <div class="position-sticky pb-lg-3 pb-2 mx-md-5 mt-lg-0 mt-0 ps-2" style="top: 100px">
                          <h3>And Your Topic Is...</h3>
                          <p></p>
                          <h5 class="lead text-dark font-weight-normal pe-3">Please choose the category of the quiz you wanna do!</h5>
                      </div>
                  <?php } else { ?>
-                     <div class="position-sticky pb-lg-5 pb-3 mx-md-5 mt-lg-0 mt-0 ps-2" style="top: 100px">
+                     <div class="position-sticky pb-lg-3 pb-2 mx-md-5 mt-lg-0 mt-0 ps-2" style="top: 100px">
                          <h3>Have Fun</h3>
                          <h5 class="lead text-dark font-weight-normal pe-3">Have fun answering the Questions of the quiz!</h5>
                      </div>
                  <?php } ?>
              </div>
              <div class="row justify-content-center">
-             <div class="col-sm-12 mt-0 animate__animated animate__fadeInBottomRight">
+             <div class="col-sm-12 mt-0 animate__animated animate__rollIn">
                      <?php if (!isset($_SESSION['topic']) && isset($_SESSION['LOGGEDIN']) && $_SESSION['LOGGEDIN'] == true) { ?>
                          <!-- Questions -->
                          <form action="" method="post">
@@ -95,7 +95,7 @@ $stmt->execute();
                                                      <?php foreach ($topics as $topic) { ?>
                                                         <option value="<?php echo $topic['topic']; ?>"><?php echo ucfirst($topic['topic']); ?></option><?php } ?>
                                                      </select>                                                                      
-                                                        <button type="submit" class="btn1 btn-round border-0 text-secondary">
+                                                        <button type="submit" class="btn1 border-0 text-secondary">
                                                         <i class="fa-light fa-circle-arrow-right fa-4x">
                                                         <p style="font-family: Poppins, sans-serif; font-weight:bold; font-size: 20%">Start Quiz</p></i></button>
                                                  </div>
@@ -120,7 +120,7 @@ $stmt->execute();
                                  </div>
                                  <div class="tab-content tab-space">
                                      <div class="tab-pane active" id="preview-btn-color">
-                                         <div class="row text-center py-3 mt-3">
+                                         <div class="row text-center py-3 mt-2">
                                              <div class="col-12 mx-auto">
 
                                                  <?php
@@ -148,10 +148,10 @@ $stmt->execute();
                                                                 echo '</div>';
                                                             }
                                                         }
-                                                        echo '<button type="submit" name="next" class="btn1 border-0 text-secondary mx-auto px-2 me-2 mt-2">
+                                                        echo '<button type="submit" name="next" class="btn1 btn1-round border-0 text-secondary mx-auto px-2 me-2 mt-1">
                                                         <i class="fa-light fa-circle-arrow-right fa-4x">
                                                         <p style="font-family: Poppins, sans-serif; font-size: 25%">next question</p></i></button>';
-                                                        echo '<button type="submit" name="back" class="btn1 border-0 text-secondary mx-auto px-2 me-2 mt-2">
+                                                        echo '<button type="submit" name="back" class="btn1 btn1-round border-0 text-secondary mx-auto px-2 me-2 mt-1">
                                                         <i class="fa-light fa-forward-step fa-3x">
                                                         <p style="font-family: Poppins, sans-serif; font-size: 25%">last question</p></i></button>';                      
                                                         echo '</form>';
@@ -160,8 +160,8 @@ $stmt->execute();
                                              </div>
                                          </div>
                                             <div class="row justify-content-center">
-                                                <div class="col-sm-2 m-3">
-                                                    <a href="#" class="btn1 border-0 text-secondary"><i class="fa-light fa-circle-arrow-up fa-2x"><p style="font-family: Poppins, sans-serif;">Up!</p></i></a>
+                                                <div class="col-sm-2 m-1">
+                                                    <a href="#" class="btn1 btn1-round border-0 text-secondary"><i class="fa-light fa-circle-arrow-up fa-2x"><p style="font-family: Poppins, sans-serif;" class="btn1 btn1-round ">Up!</p></i></a>
                                                 </div>
                                             </div>
                                          </div>

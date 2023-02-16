@@ -16,14 +16,16 @@
 
 ---
 
-## Tagesplanung
+## Daily Tasks (Schedule)
 
 - Wedensday: 8.2..: Brainstorming,  deal out of features, Github setup, Trello setup
-- Friday 10.2..: Development phase
-- Monday 13.2..: Development phase
+- Friday 10.2..: Development phase/Research/Understand template given
+- Monday 13.2..: Development phase/Research/Understand template
 - Tuesday 14.2..: Testing/ Development
 - Wedensday 15.2..: Cleaning, final review, ready for release, deployment
 - Thursday 16.2..: 12.30 Deadline, Afternoon: Retrospection/Presentation
+
+### ALL TASKS MAY CHANGE DURING PROCESS!
 
 ## Target:
 
@@ -34,7 +36,6 @@
 - All deliverables met as demanded
 
 ---
-
 
 ## Example Team-Working-Agreement
 ### courtesy of [ARTSY](https://github.com/artsy)
