@@ -26,7 +26,12 @@
 ## Usage: Trivia Quiz
 <ol>
 <li>open Index.php-page</li>
-<li>manual</li>
+<li>login or register for an account and login</li>
+<li>chose your quiz topic</li>
+<li>answer all questions</li>
+<li style="color:red">(incomplete -> report shows up)</li>
+<li style="color:red">(incomplete -> stored in your account and you can logout and com back whenever you like)</li>
+<li style="color:red">(incomplete -> Do another quiz and improve your general knowledge)</li>
 </ol>
 
 ## Thank you for your time.
@@ -51,6 +56,14 @@
 * imagination 
 * feeling for details
 * the will to learn, improve share knowledge throughout the whole team-experience
+----
+## Deliverables:
+<div style="text-align:center; font-size:20px">
+
+[Github](https://github.com/svenbledt/WinX_RELOADED)<br>
+[FIGMA](https://www.figma.com/file/WvnuFdc8VXnEzWyWyrSheU/winxReloaded?node-id=0%3A1&t=2ecVyyduPw9fGSsu-1) 
+
+</div>
 
 ----
 ### A production by [#WinXReloaded](https://github.com/svenbledt/WinX_RELOADED) / Team Red  
