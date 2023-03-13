@@ -154,16 +154,17 @@ function getrealip()
     }
     return $realip;
 }
+// FOR BETTER READABILITY (OPTIONAL), can be exchanged with ucwords ----------------------------------------------------------------
 
 // get image_name from images table
 function getQuestionImage($conn, $image)
 {
-    $sql = "SELECT * FROM questions WHERE image = :image";
+    $sql = "SELECT image FROM questions WHERE topic = :image";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':type', $image, PDO::PARAM_STR);
     $stmt->execute();
     $image = $stmt->fetch(PDO::FETCH_ASSOC);
-    $image_name = $image;
+    $image_name = $image['image'];
     return $image_name;
 }
 
@@ -173,4 +174,12 @@ $topicNameMap = [
     'ch-norris' => 'Chuck Norris',
     'animals' => 'Animals',
     'movies' => 'Movies',
+    'gen-knowledge' => 'General Knowledge',
+    'astronautics' => 'Astronautics',
+    'general' => 'General' 
+
 ];
+
+
+
+
