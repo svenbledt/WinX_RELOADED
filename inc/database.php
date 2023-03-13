@@ -1,6 +1,6 @@
 <?php
 $host = '185.254.96.204';
-$port = '3336';
+$port = '3306';
 $dbname = 'db_winx';
 $username = 'winx';
 $password = 'opportunity';
