@@ -1,7 +1,7 @@
 -- --------------------------------------------------------
 -- Host:                         185.254.96.204
--- Server version:               5.7.40-log - MySQL Community Server (GPL)
--- Server OS:                    Win64
+-- Server Version:               5.7.41-log - MySQL Community Server (GPL)
+-- Server Betriebssystem:        Win64
 -- HeidiSQL Version:             12.1.0.6537
 -- --------------------------------------------------------
 
@@ -15,11 +15,11 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Dumping database structure for db_winx
+-- Exportiere Datenbank Struktur für db_winx
 CREATE DATABASE IF NOT EXISTS `db_winx` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `db_winx`;
 
--- Dumping structure for table db_winx.answers
+-- Exportiere Struktur von Tabelle db_winx.answers
 CREATE TABLE IF NOT EXISTS `answers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `question_id` int(11) NOT NULL,
@@ -29,8 +29,8 @@ CREATE TABLE IF NOT EXISTS `answers` (
   KEY `foreign_key` (`question_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=284 DEFAULT CHARSET=utf8mb4 COMMENT='Die Antworten nach Fragen Sortiert';
 
--- Dumping data for table db_winx.answers: ~283 rows (approximately)
-INSERT INTO `answers` (`id`, `question_id`, `is_correct`, `answer`) VALUES
+-- Exportiere Daten aus Tabelle db_winx.answers: ~283 rows (ungefähr)
+REPLACE INTO `answers` (`id`, `question_id`, `is_correct`, `answer`) VALUES
 	(1, 1, '0', 'Europe'),
 	(2, 1, '0', 'Asia'),
 	(3, 1, '1', 'South America'),
@@ -315,7 +315,7 @@ INSERT INTO `answers` (`id`, `question_id`, `is_correct`, `answer`) VALUES
 	(282, 66, '1', '"Somebody That I Used to Know" by Gotye'),
 	(283, 51, '1', 'Meco (main engine cut off)');
 
--- Dumping structure for table db_winx.lang
+-- Exportiere Struktur von Tabelle db_winx.lang
 CREATE TABLE IF NOT EXISTS `lang` (
   `lang` enum('en','de') NOT NULL,
   `key` enum('reg_mail','reg_user','reg_pwd','reg_pwd2') NOT NULL,
@@ -323,11 +323,11 @@ CREATE TABLE IF NOT EXISTS `lang` (
   PRIMARY KEY (`key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='language table';
 
--- Dumping data for table db_winx.lang: ~1 rows (approximately)
-INSERT INTO `lang` (`lang`, `key`, `value`) VALUES
+-- Exportiere Daten aus Tabelle db_winx.lang: ~1 rows (ungefähr)
+REPLACE INTO `lang` (`lang`, `key`, `value`) VALUES
 	('en', 'reg_mail', 'Email');
 
--- Dumping structure for table db_winx.questions
+-- Exportiere Struktur von Tabelle db_winx.questions
 CREATE TABLE IF NOT EXISTS `questions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `topic` enum('music','ch-norris','animals','movies','d-n-d','astronautics','technology','ai','geography','sports','science','informatics','gen-knowledge','general') COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -337,8 +337,8 @@ CREATE TABLE IF NOT EXISTS `questions` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table db_winx.questions: ~66 rows (approximately)
-INSERT INTO `questions` (`id`, `topic`, `question`, `type`, `image`) VALUES
+-- Exportiere Daten aus Tabelle db_winx.questions: ~66 rows (ungefähr)
+REPLACE INTO `questions` (`id`, `topic`, `question`, `type`, `image`) VALUES
 	(1, 'geography', 'On which continent lies São Paulo?', 'SINGLE', 'bg_geography.png'),
 	(2, 'music', 'Who is the lead singer of the band "Queen"?', 'SINGLE', 'bg_music.png'),
 	(3, 'music', 'What is the most famous song of the band "Beatles"?', 'SINGLE', 'bg_music.png'),
@@ -406,7 +406,7 @@ INSERT INTO `questions` (`id`, `topic`, `question`, `type`, `image`) VALUES
 	(65, 'music', 'Which of the following musicians have won the Nobel Prize in Literature?', 'MULTIPLE', 'bg_music.png'),
 	(66, 'music', 'Which of the following songs have won the Grammy Award for Record of the Year?', 'MULTIPLE', 'bg_music.png');
 
--- Dumping structure for table db_winx.summary
+-- Exportiere Struktur von Tabelle db_winx.summary
 CREATE TABLE IF NOT EXISTS `summary` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -415,26 +415,26 @@ CREATE TABLE IF NOT EXISTS `summary` (
   `correct` tinyint(4) NOT NULL DEFAULT '0',
   `timest` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8mb4 COMMENT='Quiz Log des Opportunity quizes';
+) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8mb4 COMMENT='Quiz Log des Opportunity quizes';
 
--- Dumping data for table db_winx.summary: ~93 rows (approximately)
-INSERT INTO `summary` (`id`, `user_id`, `question_id`, `answer`, `correct`, `timest`) VALUES
+-- Exportiere Daten aus Tabelle db_winx.summary: ~119 rows (ungefähr)
+REPLACE INTO `summary` (`id`, `user_id`, `question_id`, `answer`, `correct`, `timest`) VALUES
 	(1, 1, 1, '3', 3, '1675163623'),
 	(2, 1, 7, '1', 1, '1675163627'),
 	(3, 1, 8, '4', 4, '1675163632'),
 	(4, 1, 9, '1', 1, '1675163638'),
 	(5, 1, 10, '1', 4, '1675163645'),
 	(6, 1, 11, '3', 3, '1675163655'),
-	(7, 1, 2, '1', 1, '1675163997'),
-	(8, 1, 3, '1', 3, '1675164000'),
-	(9, 1, 4, '1', 3, '1675164004'),
-	(10, 1, 5, '1', 2, '1675164007'),
-	(11, 1, 6, '1', 1, '1675164011'),
-	(12, 1, 12, '1', 1, '1675164014'),
-	(13, 1, 13, '1', 1, '1675164018'),
-	(14, 1, 14, '1', 1, '1675164022'),
-	(15, 1, 15, '1', 5, '1675164025'),
-	(16, 1, 16, '1', 3, '1675164028'),
+	(7, 1, 2, '2', 0, '1678272461'),
+	(8, 1, 3, '2', 0, '1678272474'),
+	(9, 1, 4, '2', 0, '1678272477'),
+	(10, 1, 5, '2', 0, '1678272487'),
+	(11, 1, 6, '1', 0, '1678272491'),
+	(12, 1, 12, '1', 0, '1678272494'),
+	(13, 1, 13, '1', 0, '1678272498'),
+	(14, 1, 14, '1', 0, '1678272502'),
+	(15, 1, 15, '1', 0, '1678272505'),
+	(16, 1, 16, '1', 0, '1678272509'),
 	(17, 1, 17, '4', 1, '1675164238'),
 	(18, 1, 18, '1', 1, '1675164244'),
 	(19, 1, 19, '3', 1, '1675164249'),
@@ -512,9 +512,34 @@ INSERT INTO `summary` (`id`, `user_id`, `question_id`, `answer`, `correct`, `tim
 	(91, 3, 66, '4', 0, '1676472622'),
 	(92, 3, 58, '1', 0, '1676540649'),
 	(93, 3, 59, '1', 0, '1676540682'),
-	(94, 3, 60, '1', 0, '1676540732');
+	(94, 3, 60, '1', 0, '1676540732'),
+	(95, 1, 62, '3', 0, '1678272514'),
+	(96, 1, 63, '2', 0, '1678272517'),
+	(97, 1, 64, '3', 0, '1678272525'),
+	(98, 1, 65, '2', 0, '1678272535'),
+	(99, 1, 66, '2', 0, '1678272541'),
+	(100, 1, 27, '3', 0, '1678272572'),
+	(101, 1, 28, '3', 0, '1678272575'),
+	(102, 1, 29, '3', 0, '1678272578'),
+	(103, 1, 30, '2', 0, '1678272582'),
+	(104, 1, 53, '3', 0, '1678272586'),
+	(105, 1, 54, '3', 0, '1678272589'),
+	(106, 1, 55, '3', 0, '1678272593'),
+	(107, 1, 56, '3', 0, '1678272596'),
+	(108, 1, 57, '3', 0, '1678272600'),
+	(109, 1, 58, '3', 0, '1678272604'),
+	(110, 1, 59, '3', 0, '1678272607'),
+	(111, 1, 60, '2', 0, '1678272611'),
+	(112, 1, 45, '2', 0, '1678272670'),
+	(113, 1, 46, '4', 0, '1678272783'),
+	(114, 1, 47, '3', 0, '1678272787'),
+	(115, 1, 48, '2', 0, '1678272790'),
+	(116, 1, 49, '1', 0, '1678272793'),
+	(117, 1, 50, '2', 0, '1678272796'),
+	(118, 1, 51, '1', 0, '1678272800'),
+	(119, 1, 52, '2', 0, '1678272803');
 
--- Dumping structure for table db_winx.users
+-- Exportiere Struktur von Tabelle db_winx.users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(18) NOT NULL DEFAULT '0',
@@ -527,9 +552,9 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COMMENT='Benutzer Tabelle oop Project 1 PHP Quiz';
 
--- Dumping data for table db_winx.users: ~4 rows (approximately)
-INSERT INTO `users` (`id`, `username`, `password_sha256`, `email`, `created_at`, `last_login`, `ip`, `score`) VALUES
-	(1, 'Trojan', 'dd67797d20b32f6df658be198b2fcd9d4e78fc6dc6861f798a10cc9b657c5417', 'sven.bledt@gmail.com', '1674738529', '1676273785', '172.19.0.1', 0),
+-- Exportiere Daten aus Tabelle db_winx.users: ~4 rows (ungefähr)
+REPLACE INTO `users` (`id`, `username`, `password_sha256`, `email`, `created_at`, `last_login`, `ip`, `score`) VALUES
+	(1, 'Trojan', 'dd67797d20b32f6df658be198b2fcd9d4e78fc6dc6861f798a10cc9b657c5417', 'sven.bledt@gmail.com', '1674738529', '1678272396', '172.26.0.1', 0),
 	(2, 'Mogendar', '84fb3fdda934bf6e466529bcd728ac9a65e0abbe868709fa1d74b117345b891b', 'daniel00007.dks@gmail.com', '1675851073', '1676294775', '172.23.0.1', 0),
 	(3, 'Krakatoom77', '0114faa0b64d2703d61cb61a006f826418ce9a1ff96cf43ce9a59bca1401474b', 'gaudenzraiber@yahoo.de', '1675851501', '1676536953', '172.30.0.1', 0),
 	(4, 'Test', '1637143595870f8b2482c12ad3b1e28a66e937a308349d996e5b57689db0e0e6', 'testuser1922@hotmail.com', '1675861163', '1676037150', '172.23.0.1', 0);
